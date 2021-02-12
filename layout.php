@@ -8,7 +8,7 @@
 <body>
     <header class="header">
     <div>
-    <img src="" alt="X-Pense App">
+    <img src="images/" alt="X-Pense App">
     </div>
     <nav>
     <ul>
