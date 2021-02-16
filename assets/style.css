@@ -76,7 +76,48 @@ h2 {
 /* Beginning of sign up main */
 
 
+h3 {
+    text-align: left; 
+    
+ 
+ }
+ .formheader{
+     
+     padding: 12px;
+     background-color: #D9D9D9;
+     
+ 
+     
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ .advert-images {
+     width:200px;
+     height: 200px;
+     float: right;
+     margin-bottom: 10px;
+     position: relative;
+     bottom: 250px;
 
+    
+     
+
+     
+ }
+  h4 {float: right;
+    padding-left: 10px;
+    bottom: 10px;
+    
+
+    
+     
+     
+     
+ }
 
 
 
