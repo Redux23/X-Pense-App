@@ -23,17 +23,30 @@
     </header>
     <main>
         <div class="container">
-            <!-- Write your code here -->
-            <h2>This is the main page</h2>
+            <!-- Write your code here --> 
+            
+            <h4> kindly Login to access your account</h4>
+            <form action="layout.php" methods="GET">
+             <input type="text"placeholder="please enter your email" name="email">
+             <input type="password placeholder="****** required>
+             <input type="Sumbit">;
+     
+             <div class="aside-one">
+             <h3>Login today to track your expenses an save more!!</h3> 
+              <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">  
+              <div class="aside-two">
+             <h3>Start monitoring your spending and planing for the future </h3>
 
+             <img src="assets/images/journey.jpg"  width="100px" height="100px"alt="journey">
+             
         </div>
-    
+       
   
     
     </main>
     <footer>
         <div class="footer">
-            <h4>This is the footer!</h4>
+            <h4>Copyright 2021. Robert Gordon University SoC IT module</h4>
 
         </div>
     </footer>
