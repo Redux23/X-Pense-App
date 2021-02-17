@@ -1,3 +1,6 @@
+
+<!-- Author: Bright Osuagwu -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

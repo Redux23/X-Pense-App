@@ -21,47 +21,33 @@
     </ul>
     </nav>
     </header>
-    <main>
-        <div class="container">
+    <main class="container">
+        <section >
             <!-- Write your code here -->
-            <div id="mainheader">
-                
-            </div>
+          
             <h2>Welcome to your first Student Expense App. Register an Account Today</h2>
         
-        </div>
+       </section>
             
-        <div class="formheader">
+        <section class="formheader">
             <h3>New User? Sign Up Here</h3>
-            <form action="" method=""> 
-                <input type="text" placeholder="Username" name="uname"><br><br>
-                <input type="text" placeholder="Firstname" name="fname"><br><br>
-                <input type="text" placeholder="Lastname" name="lname"><br><br>
+            <form action="signup.php" method="POST" id="create-form"> 
+                <input type="text" placeholder="Username" name="username"><br><br>
+                <input type="text" placeholder="Firstname" name="firstname"><br><br>
+                <input type="text" placeholder="Lastname" name="lastname"><br><br>
                 <input type="email" placeholder="Email" name="email"><br><br>
                 <input type="password" placeholder="Password" name="password"><br><br>
                 <input type="password" placeholder="Confirm Password" name="Confirm-password"><br><br>
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign up" name="SignUp-button">
                 
             </form>
-        </div>
-        
-            
-            
-        <?php
-        /*
-        $username=$_GET["username"];
-        echo '<br />';
-        echo $username;
-        */
-        ?>
-        
-        
+        </section>
         
     
     <aside>
         <section>
         <div>
-        <img src= "assets/images/analytics.jpg"  class="advert-images" alt="änalytics">
+        <img src="assets/images/analytics.jpg"  class="advert-images" alt="analytics">
         </div>
         </section>
         
@@ -90,7 +76,7 @@
     </footer>
 
     <?php
-   
+
    ?>
 </body>
 </html>
