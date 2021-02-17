@@ -78,10 +78,6 @@
 
     <?php
    
-     require_once "signup.php";
-     require_once "session.php";
-
-     
 
     function createNewUser(){
        
