@@ -31,15 +31,15 @@
     <main class="container">
 
             <!-- Write your code here -->
-            <section class="section-1">
+            <section class="form-wrapper-2">
                 <h4 class="form-info"> kindly Login to access your account</h4>
-                <div class="form-div">
+                <div class="form-div-2">
                     <form action="" methods="">
                         <input type="email" placeholder="Email" name="email">
-                        <br>
                         <input type="password" placeholder="Password"  name="password">
-                        <br>
-                        <input type="submit" value="Login">
+                        <div>
+                            <input type="submit" value="Login">
+                        </div>
                     </form>
 
                 </div>
