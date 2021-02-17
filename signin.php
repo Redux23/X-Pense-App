@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +35,10 @@
             <section class="section-1">
                 <h4 class="form-info"> kindly Login to access your account</h4>
                 <div class="form-div">
-                    <form action="" methods="">
+                
+
+                
+                <form action="signin.php" method="POST" id="create-form">
                         <input type="email" placeholder="Email" name="email">
                         <br>
                         <input type="password" placeholder="Password"  name="password">
@@ -75,3 +79,53 @@
 </body>
 
 </html>
+
+<?php
+
+include("connection.php"); //Establishing connection with our database
+if(empty($_POST["email"]) || empty($_POST["password"]))
+{
+    echo "Both fields are required.";
+}else
+{
+ $username=$_POST['email'];
+ $password=$_POST['password'];
+
+ //Checking to see if user exist in database
+ $sql="SELECT uid FROM users WHERE  email='$username' and password='$password'";
+
+ //Code to direct to the next page if database exist
+ $result=mysqli_query($db,$sql);
+ if(mysqli_num_rows($result) == 1)
+ {
+ header("location: signup.php"); // Redirecting To another Page
+ }else
+{
+ echo "Incorrect username or password";
+ }
+}
+
+
+
+/* $servername = "localhost";
+$databasename='cmm004';
+$email = "root";
+$password = "";
+
+ $connection = mysqli_connect($servername, $username, $password, $databasename);
+
+ //checking to see if user exists
+
+
+ $slquery= "SELECT * FROM testuser_table WHERE email= '$email' AND password= '$password'";
+ $selectResult = mysqli_query($connection, $slquery);
+ $user = mysqli_fetch_assoc($selectResult);
+ if(mysqli_num_rows($result) == 1)
+ {
+ header("location: home.php"); // Redirecting To another Page
+ }else
+ {
+ echo "Incorrect username or password.";
+ }
+} */
+?>
