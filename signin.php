@@ -28,23 +28,25 @@
     </header>
 
 
-    <main>
-        <div class="container">
+    <main class="container">
+
             <!-- Write your code here -->
-            <section>
-                <h4> kindly Login to access your account</h4>
-    
-                <form action="" methods="">
-                    <input type="text" placeholder="please enter your email" name="email">
-                    <br>
-                    <input type="password" placeholder=" please enter password"  name="password">
-                    <br>
-                    <input type="submit" value="Login">
-                </form>
+            <section class="section-1">
+                <h4 class="form-info"> kindly Login to access your account</h4>
+                <div class="form-div">
+                    <form action="" methods="">
+                        <input type="email" placeholder="Email" name="email">
+                        <br>
+                        <input type="password" placeholder="Password"  name="password">
+                        <br>
+                        <input type="submit" value="Login">
+                    </form>
+
+                </div>
 
             </section>
- <section class="section-2">
-     <aside class="side-bar">
+             <section class="section-2">
+             <aside class="side-bar">
             <div class="aside-one">
                 <h6>Login today to track your expenses and save more!!</h6>
                 <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">
@@ -56,13 +58,6 @@
              </div>
       </aside>
  </section>
-
-       
-
-       
-        <!-- <div class="clearfix">
-
-        </div> -->
 
 
     </main>
