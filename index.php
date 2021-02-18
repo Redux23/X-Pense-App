@@ -19,11 +19,7 @@
     <nav class="navbar">
     <ul class="nav-links">  
     <li><a href="index.php">Home</a></li>
-<<<<<<< HEAD:index.php
     <li><a href="#">About</a></li>
-=======
-    <li><a href="#">About Us</a></li>
->>>>>>> staging:layout.php
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
@@ -31,22 +27,7 @@
     <main>
         <div class="container">
             <!-- Write your code here --> 
-<<<<<<< HEAD:index.php
-           This is the landing page!
-=======
-            
-           <?php
-           include('connection.php'); 
-           $sql = "SELECT * FROM users WHERE email = 'tofunmiola@yahoo.com'";
-           $result = mysqli_query($db, $sql);
-           $rowCount = mysqli_num_rows($result);
-
-           if($rowCount > 0){
-               echo '<h4>Welcome to your Expense Tracker profile page.</h4>';
-           }
-
-           ?>
->>>>>>> staging:layout.php
+           <h2>Welcome, You have successfully logged in.</h2>
         </div>
        
         <div>
