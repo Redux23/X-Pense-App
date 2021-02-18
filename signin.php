@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +34,11 @@
             <!-- Write your code here -->
             <section class="form-wrapper-2">
                 <h4 class="form-info"> kindly Login to access your account</h4>
-                <div class="form-div-2">
-                    <form action="" methods="">
+                <div class="form-div">
+                
+
+                
+                <form action="signin.php" method="POST" id="create-form">
                         <input type="email" placeholder="Email" name="email">
                         <input type="password" placeholder="Password"  name="password">
                         <div>
@@ -57,7 +61,7 @@
                  <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
              </div>
       </aside>
- </section>
+ </section> 
 
 
     </main>
@@ -75,3 +79,33 @@
 </body>
 
 </html>
+
+<?php
+
+include("connection.php"); //Establishing connection with our database
+if(empty($_POST["email"]) || empty($_POST["password"]))
+{
+    echo "Both fields are required.";
+}else
+{
+ $email=$_POST['email'];
+ $password=$_POST['password'];
+
+ //Checking to see if user exist in the database
+ $sql="SELECT uid FROM users WHERE  email='$email' and password='$password'";
+
+ //Code to direct to the next page if database exist
+ $result=mysqli_query($db,$sql);
+ if(mysqli_num_rows($result) == 1)
+ {
+ header("location: index.php"); // Redirecting To another Page
+ }else
+{
+ echo "Incorrect username or password";
+ }
+}
+
+
+
+
+?>

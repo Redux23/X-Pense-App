@@ -1,5 +1,5 @@
 
-<!-- Author: Bright Osuagwu -->
+<!-- Author: Bright Osuagwu  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +18,8 @@
     </div>
     <nav class="navbar">
     <ul class="nav-links">  
-    <li><a href="layout.php">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="#">About Us</a></li>
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
@@ -27,16 +27,21 @@
     <main>
         <div class="container">
             <!-- Write your code here --> 
-           This is the landing page!
+            
+           <?php
+           include('connection.php'); 
+           $sql = "SELECT * FROM users WHERE email = 'tofunmiola@yahoo.com'";
+           $result = mysqli_query($db, $sql);
+           $rowCount = mysqli_num_rows($result);
+
+           if($rowCount > 0){
+               echo '<h4>Welcome to your Expense Tracker profile page.</h4>';
+           }
+
+           ?>
         </div>
        
-        <div>
-            <ul style="list-style-type: none; display: flex; justify-content: center;">
-                <li><a href="signup.php">Sign-Up</a></li>
-                <li><a href="signin.php">Sign-In</a></li>
-                
-            </ul>
-        </div>
+  
     
     </main>
     <footer>
@@ -49,6 +54,5 @@
     <?php
    
    ?>
-   <script src="script.js"></script>
 </body>
 </html>
