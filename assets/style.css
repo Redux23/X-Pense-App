@@ -92,7 +92,7 @@ h2 {
      float: right;
      margin-bottom: 10px;
      position: relative;
-     bottom: 250px;   
+     /* bottom: 250px;    */
  }
 
   /* h4 {

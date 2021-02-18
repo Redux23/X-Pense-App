@@ -9,14 +9,17 @@
     <title>X-Pense App</title>
 </head>
 <body>
-    <?php require_once 'createUser.php' ?>
+    <?php 
+    require_once 'createUser.php';
+    ?>
+
     <header class="header">
     <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
     <nav class="navbar">
     <ul class="nav-links">  
-    <li><a href="layout.php">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact Us</a></li>
     </ul>
@@ -33,7 +36,7 @@
         <section class="form-wrapper-1">
             <div class="form-div-1">
                 <h3>New User? Sign Up Here</h3>
-                <form action="pages/createUser.php" method="POST" id="create-form"> 
+                <form action="createUser.php" method="POST" id="create-form"> 
                     <input type="text" placeholder="Username" name="username" required/>
                     <input type="text" placeholder="Firstname" name="firstname" required/>
                     <input type="text" placeholder="Lastname" name="lastname" required/>
@@ -67,7 +70,6 @@
 
 </div>
         
-    
   
 </main> 
     <footer>
