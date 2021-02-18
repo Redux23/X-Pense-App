@@ -27,24 +27,16 @@
     <main>
         <div class="container">
             <!-- Write your code here --> 
-            
-            <h4> kindly Login to access your account</h4>
-            <form action="layout.php" methods="GET">
-             <input type="text"placeholder="please enter your email" name="email">
-             <input type="password placeholder="****** required>
-             <input type="Sumbit">;
-     
-             <div class="aside-one">
-             <h3>Login today to track your expenses an save more!!</h3> 
-              <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">  
-              <div class="aside-two">
-             <h3>Start monitoring your spending and planing for the future </h3>
-
-             <img src="assets/images/journey.jpg"  width="100px" height="100px"alt="journey">
-             
+           This is the landing page!
         </div>
        
-  
+        <div>
+            <ul style="list-style-type: none; display: flex; justify-content: center;">
+                <li><a href="signup.php">Sign-Up</a></li>
+                <li><a href="signin.php">Sign-In</a></li>
+                
+            </ul>
+        </div>
     
     </main>
     <footer>
@@ -57,5 +49,6 @@
     <?php
    
    ?>
+   <script src="script.js"></script>
 </body>
 </html>
