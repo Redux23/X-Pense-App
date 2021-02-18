@@ -28,20 +28,18 @@
         <div class="container">
             <!-- Write your code here --> 
             
-            <h4> kindly Login to access your account</h4>
-            <form action="layout.php" methods="GET">
-             <input type="text"placeholder="please enter your email" name="email">
-             <input type="password placeholder="****** required>
-             <input type="Sumbit">;
-     
-             <div class="aside-one">
-             <h3>Login today to track your expenses an save more!!</h3> 
-              <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">  
-              <div class="aside-two">
-             <h3>Start monitoring your spending and planing for the future </h3>
+           <?php
+           include('connection.php'); 
+           $sql = "SELECT * FROM users WHERE email = 'tofunmiola@yahoo.com'";
+           $result = mysqli_query($db, $sql);
+           $rowCount = mysqli_num_rows($result);
 
-             <img src="assets/images/journey.jpg"  width="100px" height="100px"alt="journey">
-             
+           if($rowCount > 0){
+               echo '<h4>Welcome to your Expense Tracker profile page</h4>';
+           }
+
+
+           ?>
         </div>
        
   
