@@ -19,7 +19,11 @@
     <nav class="navbar">
     <ul class="nav-links">  
     <li><a href="index.php">Home</a></li>
+<<<<<<< HEAD:index.php
+    <li><a href="#">About</a></li>
+=======
     <li><a href="#">About Us</a></li>
+>>>>>>> staging:layout.php
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
@@ -27,6 +31,9 @@
     <main>
         <div class="container">
             <!-- Write your code here --> 
+<<<<<<< HEAD:index.php
+           This is the landing page!
+=======
             
            <?php
            include('connection.php'); 
@@ -39,9 +46,16 @@
            }
 
            ?>
+>>>>>>> staging:layout.php
         </div>
        
-  
+        <div>
+            <ul style="list-style-type: none; display: flex; justify-content: center;">
+                <li><a href="signup.php">Sign-Up</a></li>
+                <li><a href="signin.php">Sign-In</a></li>
+                
+            </ul>
+        </div>
     
     </main>
     <footer>
@@ -54,5 +68,6 @@
     <?php
    
    ?>
+   <script src="script.js"></script>
 </body>
 </html>
