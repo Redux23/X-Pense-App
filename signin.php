@@ -38,7 +38,7 @@
                         <input type="email" placeholder="Email" name="email">
                         <input type="password" placeholder="Password"  name="password">
                         <div>
-                            <input type="submit" value="Login">
+                            <input type="submit" class="button-2" value="Login">
                         </div>
                     </form>
 
