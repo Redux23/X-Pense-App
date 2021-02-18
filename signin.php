@@ -34,16 +34,11 @@
             <!-- Write your code here -->
             <section class="form-wrapper-2">
                 <h4 class="form-info"> kindly Login to access your account</h4>
-<<<<<<< HEAD
                 <div class="form-div">
                 
 
                 
                 <form action="signin.php" method="POST" id="create-form">
-=======
-                <div class="form-div-2">
-                    <form action="" methods="">
->>>>>>> staging
                         <input type="email" placeholder="Email" name="email">
                         <input type="password" placeholder="Password"  name="password">
                         <div>
@@ -66,7 +61,7 @@
                  <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
              </div>
       </aside>
- </section>
+ </section> 
 
 
     </main>
@@ -96,7 +91,7 @@ if(empty($_POST["email"]) || empty($_POST["password"]))
  $email=$_POST['email'];
  $password=$_POST['password'];
 
- //Checking to see if user exist in database
+ //Checking to see if user exist in the database
  $sql="SELECT uid FROM users WHERE  email='$email' and password='$password'";
 
  //Code to direct to the next page if database exist
