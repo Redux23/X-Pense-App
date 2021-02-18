@@ -27,6 +27,7 @@
     <main>
         <div class="container">
             <!-- Write your code here --> 
+<<<<<<< HEAD:index.php
             
            <?php
            include('connection.php'); 
@@ -40,9 +41,18 @@
 
 
            ?>
+=======
+           This is the landing page!
+>>>>>>> staging:layout.php
         </div>
        
-  
+        <div>
+            <ul style="list-style-type: none; display: flex; justify-content: center;">
+                <li><a href="signup.php">Sign-Up</a></li>
+                <li><a href="signin.php">Sign-In</a></li>
+                
+            </ul>
+        </div>
     
     </main>
     <footer>
@@ -55,5 +65,6 @@
     <?php
    
    ?>
+   <script src="script.js"></script>
 </body>
 </html>
