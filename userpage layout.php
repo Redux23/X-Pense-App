@@ -22,7 +22,7 @@
             <ul class="nav-links">
                 <li><a href href="#">About</a></li>
                 <li><a href="#">Contact Us</a></li>
-            </ul>="index.php">Home</a></li>
+            </ul>="signin.php">Home</a></li>
                 <li><a>
         </nav>
 
