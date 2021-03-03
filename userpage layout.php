@@ -19,11 +19,11 @@
     </div>
 
     <<nav class="navbar">
-            ul class="nav-links">
-                <li><a href href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>="index.php">Home</a></li>
-                <li><a>
+            
+            <li><a href href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            
+        
         </nav>
 
     </header>
