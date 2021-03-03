@@ -20,17 +20,14 @@
 
         <nav class="navbar">
             <ul class="nav-links">
+                <li><a href="index.php">Home</a></li>
                 <li><a href href="#">About</a></li>
                 <li><a href="#">Contact Us</a></li>
-            </ul>="signin.php">Home</a></li>
-                <li><a>
+            </ul>
         </nav>
 
     </header>
-
-
-
-
-
+                
+ 
 </body>
 </html>

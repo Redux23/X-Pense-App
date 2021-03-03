@@ -12,15 +12,7 @@
 </head>
 
 <body>
-    <header class="header">
-
-        <div class="images">
-            <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
-        </div>
-
-        <<nav class="navbar">
-            ul class="nav-links">
-                <li><a href href="#">About</a></li>
+    </a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>="index.php">Home</a></li>
                 <li><a>
@@ -30,7 +22,15 @@
 
 
     <main class="container">
+<header class="header">
 
+        <div class="images">
+            <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
+        </div>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href href="#">About
             <!-- Write your code here -->
             <section class="form-wrapper-2">
                 <h4 class="form-info"> kindly Login to access your account</h4>
