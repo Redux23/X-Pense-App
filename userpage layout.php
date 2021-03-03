@@ -12,21 +12,22 @@
 
 
 <body>
-<header class="header">
+    <header class="header">
 
-    <div class="images">
-        <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
-    </div>
+        <div class="images">
+            <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
+        </div>
 
-    <<nav class="navbar">
-            
-            <li><a href href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-            
-        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>="index.php">Home</a></li>
+                <li><a>
         </nav>
 
     </header>
+
 
 
 
