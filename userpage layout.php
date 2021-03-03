@@ -18,9 +18,14 @@
         <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
 
-    
+    <nav class="navbar">
+        <ul class="nav-links">
+             <li><a href href="#">About</a></li>
+             <li><a href="#">Contact Us</a></li>
+        </ul>="index.php">Home</a></li>
+            <li><a>
+     </nav>
 
-
-
+</header>
 </body>
 </html>
