@@ -69,38 +69,11 @@
         </div>
     </footer>
 
-    <?php
+    <?php include("connection.php");
  
 
-function createNewUser(){
-   
-      //Creating a connection to our database
-      $servername = 'localhost';
-      $username = 'root';
-      $password = '';
-      $databasename = 'test_database';
-
-      $connection = mysqli_connect($servername, $username, $password, $databasename);
-
-
-      //check if connection is successful
-
-  /* if(!$connection){
-          die('Connection Error: '.mysqli_connect_error());
-      }else {
-          echo '<div style="
-          width: 220px; 
-          height: 50px; 
-          background-color: green; 
-          margin-left: 10px; 
-          border-radius: 4px; 
-          text-align: center; 
-          opacity: 70%">
-              <p style="color: #FFFFFF;">Connection Success!</p>
-          </div>';
-      }*/
-
-
+  function createNewUser(){
+      
       //Initializing form inputfields variables
       $userName = trim($_POST['username']);
       $firstName = trim($_POST['firstname']);
@@ -158,7 +131,7 @@ function createNewUser(){
       }
        else {
            //Attempting to INSERT data into our table
-            $sql = "INSERT INTO testusers_table (userName, firstName, lastName, email, password) VALUES ('$userName', '$firstName', '$lastName', '$email', '$passwordHash')";
+            $sql = "INSERT INTO testusers_table (userName, firstName, lastName, email, password) VALUES ('$userName', '$firstName', '$lastName', '$email', '$userPassword')";
        }
       
      

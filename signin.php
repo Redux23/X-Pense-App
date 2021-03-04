@@ -35,10 +35,8 @@
             <section class="form-wrapper-2">
                 <h4 class="form-info"> kindly Login to access your account</h4>
                 <div class="form-div">
-                
 
-                
-                <form action="signin.php" method="POST" id="create-form">
+                        <form action="signin.php" method="POST" id="create-form">
                         <input type="email" placeholder="Email" name="email">
                         <input type="password" placeholder="Password"  name="password">
                         <div>
@@ -82,7 +80,8 @@
 
 <?php
 
-include("connection.php"); //Establishing connection with our database
+include("connection.php"); //Establishing connection with our database*/
+
 if(empty($_POST["email"]) || empty($_POST["password"]))
 {
     echo "Both fields are required.";
@@ -92,10 +91,10 @@ if(empty($_POST["email"]) || empty($_POST["password"]))
  $password=$_POST['password'];
 
  //Checking to see if user exist in the database
- $sql="SELECT uid FROM users WHERE  email='$email' and password='$password'";
+ $queryDB ="SELECT user_ID FROM testusers_table WHERE email ='$email' AND password ='$password'";
 
  //Code to direct to the next page if database exist
- $result=mysqli_query($db,$sql);
+ $result = mysqli_query($connection,$queryDB);
  if(mysqli_num_rows($result) == 1)
  {
  header("location: index.php"); // Redirecting To another Page
@@ -104,8 +103,5 @@ if(empty($_POST["email"]) || empty($_POST["password"]))
  echo "Incorrect username or password";
  }
 }
-
-
-
 
 ?>
