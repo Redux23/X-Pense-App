@@ -69,7 +69,7 @@
         </div>
     </footer>
 
-    <?php include("connection.php");
+    <?php
  
 
   function createNewUser(){
@@ -82,10 +82,12 @@
       $userPassword = trim($_POST['userPassword']);
       $confirmPassword = trim($_POST['confirm-password']);
       $passwordHash = password_hash($userPassword, PASSWORD_BCRYPT);
+
+      require_once 'connection.php';
       
      //Checking the DB to see if user already exists
-      $slquery = "SELECT * FROM testusers_table WHERE email= '$email' OR username='$userName' LIMIT 1";
-      $selectResult = mysqli_query($connection, $slquery);
+      $sqlquery = "SELECT * FROM testusers_table WHERE email='$email' OR username='$userName'";
+      $selectResult = mysqli_query($connection, $sqlquery);
       $user = mysqli_fetch_assoc($selectResult);
      
     //conditional statement to check if username already exists
@@ -131,7 +133,7 @@
       }
        else {
            //Attempting to INSERT data into our table
-            $sql = "INSERT INTO testusers_table (userName, firstName, lastName, email, password) VALUES ('$userName', '$firstName', '$lastName', '$email', '$userPassword')";
+            $sql = "INSERT INTO testusers_table (username, firstname, lastname, email, password) VALUES ('$userName', '$firstName', '$lastName', '$email', '$userPassword')";
        }
       
      
