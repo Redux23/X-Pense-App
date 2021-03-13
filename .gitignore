@@ -1,1 +1,4 @@
 .DS_Store
+db/connection.php
+.session.php
+dashboard
