@@ -1,4 +1,8 @@
+<?php
+session_start();
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +44,7 @@
                         <input type="email" placeholder="Email" name="email">
                         <input type="password" placeholder="Password"  name="password">
                         <div>
-                            <input type="submit" value="Login">
+                            <button type="submit" name="login" value="Login">Login</button>
                         </div>
                     </form>
 
@@ -80,28 +84,33 @@
 
 <?php
 
-include("connection.php"); //Establishing connection with our database*/
+require_once 'db/connection.php'; //Establishing connection with our database*/
 
-if(empty($_POST["email"]) || empty($_POST["password"]))
-{
-    echo "Both fields are required.";
-}else
-{
- $email=$_POST['email'];
- $password=$_POST['password'];
 
- //Checking to see if user exist in the database
- $queryDB ="SELECT user_ID FROM testusers_table WHERE email ='$email' AND password ='$password'";
 
- //Code to direct to the next page if database exist
- $result = mysqli_query($connection,$queryDB);
- if(mysqli_num_rows($result) == 1)
- {
- header("location: index.php"); // Redirecting To another Page
- }else
-{
- echo "Incorrect username or password";
- }
-}
+    if (isset($_POST['login'])) {
 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $query = $connection->prepare("SELECT * FROM testusers_table WHERE email=:email");
+        $query->bindParam("email", $email, PDO::PARAM_STR);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if (!$result) {
+            echo '<p class="alert alert-danger">Username password combination is wrong!</p>';
+        } else {
+            if (password_verify($password, $result['password'])) {
+                $_SESSION['user_id'] = $result['user_ID'];
+                $_SESSION['f_name'] = $result['firstname'];
+                $_SESSION['l_name'] = $result['lastname'];
+                $_SESSION['u_email'] = $result['email'];
+                header('location: welcome.php');
+                echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
+            } else {
+                echo '<p class="alert alert-danger">Username password combination is wrong!</p>';
+            }
+        }
+    }
 ?>
+
