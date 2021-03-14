@@ -1,7 +1,7 @@
 
 <!-- Author: Bright Osuagwu  -->
 <?php
-include('session.php')
+include('session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +25,13 @@ include('session.php')
     echo '<li><a href="index.php">Home</a></li>';
     echo '<li><a href="userProfile/userprofile.php">Profile</a></li>';
     echo '<li><a href="includes/logoutUser.php">Logout</a></li>';
+    sleep(2);
     }
     else{
       echo '<li><a href="../index.php">Home</a></li>';
       echo '<li><a href="#">About</a></li>';
       echo '<li><a href="#">Contact Us</a></li>';
+      sleep(2);
     }
     
     ?>

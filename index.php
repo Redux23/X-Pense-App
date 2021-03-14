@@ -21,28 +21,38 @@
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
     
-    <h1 style="font-size:15px; justify-content: center; margin: auto;">This is the First student expense tracker</h1>
 
 <nav class="navbar">
     <ul class="nav-links">  
-    <li><a href="layout.php">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
-    </header>  
-</div>
+ </header>  
+
     <style>
 body  {
   background-image: url("assets/images/person_1.jpg");
   background-color: #f2f2f2;
+  /* background-repeat: cover; */
+
 }
 </style>
 
         <section >
             <!-- Write your code here -->
           
-            <div class="bottomdown">Welcome to your first Student Expense App. Register an account Today</div>
+            <div class="bottomdown" 
+            style="
+            color: #ffffff;
+             font-weight: bold;
+             font-size: 25px;
+             opacity: 80%;
+             text-align: center;
+             margin-bottom: 20px;
+             margin-top: 10px;"
+             >Welcome to your first Student Expense App. Register an account Today</div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-right">
                <a href="signup.php" class="btn btn-info" role="button">Sign Up here</a> 
             </section>
@@ -61,7 +71,8 @@ body  {
 
   <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
+  opacity: 70%">
   <a class="text-white" href="privacy.html"><h6> Privacy Policy</h6>
             <h6> Call us: +44470000000 </h6></a>
     © 2020 Copyright: 

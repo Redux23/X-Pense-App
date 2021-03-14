@@ -3,16 +3,19 @@
 require_once 'header.php';
 
 ?>
-    
 
-<div class="row">
+
+
+<section class="row">
     <!-- Sidebar  -->
-    <div class="col-3">
+    <div class="col-3 sidebar">
         Col-3
     </div>
 <!-- Main dashboard -->
-    <div class="col-9">
- <section class="container-fluid">
+    <div class="col-9" id="dashboard">
+ <div class="container-fluid">
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
  <div class="row">
 <!-- Budget card -->
 <div class="col-xl-3 col-md-6 mb-4">
@@ -69,9 +72,27 @@ require_once 'header.php';
     </div>
 </div>
 </div>  
- </section>  
+</div>  
+</div>  
+    <div class="user-input">
+    <form action="userprofile.php" method="POST">
+    <div class="form-group">
+    <input type="text" placeholder="Budget" name="budget" class="form-control">
     </div>
-</div>
+    <div class="form-group">
+    <input type="text" placeholder="Expense" name="expense" class="form-control">
+    </div>
+    
+    <!-- <div class="form-group">
+    <input type="text" placeholder="Description" name="description" class="form-control">
+    </div> -->
+    <button class="btn btn-primary btn-lg" name="save-value">Save</button>
+    </form>
+    </div>
+ </div>  
+    </div>
+    
+</section>
  
 
 
@@ -90,5 +111,68 @@ require_once 'header.php';
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     
+
+<?php
+include('session.php');
+
+require_once '../db/connection.php';
+
+
+
+if(isset($_POST['save-value'])){
+    $balSum=0;
+    $budget =$_POST['budget'];
+    $expense =$_POST['expense'];
+   //echo $one;
+   $sum=$budget-$expense;
+  
+   echo '<br />';
+   echo "the sum is: ".$balSum;
+   echo '<br />';
+   echo '<br />';
+
+// $userID = ($_SESSION['user_id']);
+// $uName = $_SESSION['userName'];
+// $fName = $_SESSION['f_name'];
+// $lName = $_SESSION['l_name'];
+// $uEmail = $_SESSION['u_email'];
+// $pwd = $_SESSION['pwd'];
+
+echo $userID;
+echo '<br />';
+echo $uName;
+echo '<br />';
+echo $fName;
+echo '<br />';
+echo $lName;
+echo '<br />';
+echo $uEmail;
+echo '<br />';
+echo $pwd;
+echo '<br />';
+echo 'I am strong';
+echo '<br />';
+echo gettype($budget);
+echo '<br />';
+echo gettype($expense);
+  
+   
+   $sql = "UPDATE testusers_table SET budget='$budget', expense='$expense' WHERE user_ID= 22;";
+   $stmt = mysqli_query($connection, $sql);
+   if($query_run)
+   {
+       $_SESSION['success'] = "Your data has been successfully updated!"; // Success message.
+       header("location: admin.php"); // redirect back to admin page.
+       exit();
+   }
+   else{
+       $_SESSION['status'] = "Your data has not been updated."; // error message.
+       header("location: admin.php"); // redirect back to admin page.
+       exit();
+   }
+
+}
+
+?>
 </body>
 </html>

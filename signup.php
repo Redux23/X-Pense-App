@@ -51,7 +51,7 @@ session_start();
             
         <section class="form-wrapper-1">
             <div class="form-div-1">
-                <h3>New User? Sign Up Here</h3>
+                <p>New User? Sign Up Here</p>
                 <form action="signup.php" method="POST" id="create-form"> 
                     <input type="text" placeholder="Username" name="username" required/>
                     <input type="text" placeholder="Firstname" name="firstname" required/>

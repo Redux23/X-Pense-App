@@ -39,3 +39,18 @@ list-style-type: none;
 padding: 10px;
 
 }
+
+
+
+
+/* #dashboard {
+    display: none;
+} */
+
+#update-form {
+    display: none;
+}
+
+#delete-form{
+    display: none;
+}
