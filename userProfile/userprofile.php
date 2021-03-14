@@ -7,8 +7,21 @@ require_once 'header.php';
 
 <div class="row">
     <!-- Sidebar  -->
+    
     <div class="col-3">
-        Col-3
+        
+       <header>My App</header>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
+            
+            
+
+        </ul>
+     col-3
     </div>
 <!-- Main dashboard -->
     <div class="col-9">
