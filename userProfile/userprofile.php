@@ -8,10 +8,6 @@ require_once 'header.php';
 
 <section class="row">
     <!-- Sidebar  -->
-<<<<<<< HEAD
-    <div class="col-3 sidebar">
-        Col-3
-=======
     
     <div class="col-3">
         
@@ -27,7 +23,6 @@ require_once 'header.php';
 
         </ul>
      col-3
->>>>>>> staging
     </div>
 <!-- Main dashboard -->
     <div class="col-9" id="dashboard">
