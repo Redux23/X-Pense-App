@@ -1,4 +1,8 @@
+<?php
+session_start();
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,29 +80,33 @@
 
 <?php
 
-if(isset($_POST['login'])){
+require_once 'db/connection.php'; //Establishing connection with our database*/
 
- $email= trim($_POST['email']);
- $password= trim($_POST['password']);
 
- require_once "connection.php"; //Establishing connection with our database*/
 
-//  if(empty($email) || empty($password)){
-//     echo "Both fields are required.";
-// }
- //Checking to see if user exist in the database
- $queryDB ="SELECT user_ID FROM testusers_table WHERE email ='$email' AND password ='$password'";
- //Code to direct to the next page if database exist
- $result = mysqli_query($connection,$queryDB);
+    if (isset($_POST['login'])) {
 
- if(mysqli_num_rows($result) == 1)
- {
- // Redirecting To another Page
- header("location: welcome.php");
- }
-else{
- echo "Incorrect username or password";
- }
-}
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
+        $query = $connection->prepare("SELECT * FROM testusers_table WHERE email=:email");
+        $query->bindParam("email", $email, PDO::PARAM_STR);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if (!$result) {
+            echo '<p class="alert alert-danger">Username password combination is wrong!</p>';
+        } else {
+            if (password_verify($password, $result['password'])) {
+                $_SESSION['user_id'] = $result['user_ID'];
+                $_SESSION['f_name'] = $result['firstname'];
+                $_SESSION['l_name'] = $result['lastname'];
+                $_SESSION['u_email'] = $result['email'];
+                header('location: welcome.php');
+                echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
+            } else {
+                echo '<p class="alert alert-danger">Username password combination is wrong!</p>';
+            }
+        }
+    }
 ?>
+
