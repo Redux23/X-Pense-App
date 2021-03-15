@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 * {
     margin: 0;
@@ -7,6 +9,7 @@
     }
 
 
+>>>>>>> staging
 body {
     font-family: 'Open Sans', sans-serif;
     margin:0; 
@@ -49,9 +52,25 @@ padding: 10px;
 
 }
 
+<<<<<<< HEAD
+/* Sidebar Styling begins*/
+
+
+.body{
+    font-family:'Roboto', sans-serif;
+}
+
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+=======
 /* Sidebar Styling begins */
 
 
+>>>>>>> staging
 .col-3{
     position: fixed;
     left: 0;
@@ -61,14 +80,22 @@ padding: 10px;
 
 
 }
+<<<<<<< HEAD
+.col-3 header{
+=======
 /* .col-3 header{
+>>>>>>> staging
 font-size: 22px;
 color: white;
 text-align: center;
 line-height: 20px;
 user-select: none;
 
+<<<<<<< HEAD
+}
+=======
 } */
+>>>>>>> staging
 .col-3 ul a{
     display: block;
     width: 100%;

@@ -39,50 +39,41 @@ session_start();
 
 
     <main class="container">
-
-            <!-- Write your code here -->
-            <section class="form-wrapper-2">
-                <h4 class="form-info"> kindly Login to access your account</h4>
-                <div class="form-div">
-
-                        <form action="signin.php" method="POST" id="create-form">
-                        <input type="email" placeholder="Email" name="email">
-                        <input type="password" placeholder="Password"  name="password">
-                        <div>
-                            <button type="submit" name="login" value="Login">Login</button>
-                        </div>
-                    </form>
-
-                </div>
-
-            </section>
-             <section class="section-2">
-             <aside class="side-bar">
-            <div class="aside-one">
-                <h6>Login today to track your expenses and save more!!</h6>
-                <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">
-            </div>
-
-             <div class="aside-two">
-                 <h6>Start monitoring your spending and planing for the future </h6>
-                 <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
-             </div>
-      </aside>
- </section> 
+    <section>
+                <h2>kindly Login to access your account</h2>
+              <!--Form-->
+              <form>
+                <form action="signin.php" methods="post" id="create-form">
+                    <input type="email" placeholder="Email" name="email">
+                    <br> 
+                    <input type="password" placeholder="Password"  name="password">
+                    <br>
+                    <input type="submit" value="Login">
+     </form>
+     <!--Images here-->
+ </section>
+ <section class="section-2">
+ <aside class="side-bar">
+ <div class="aside-one">
+ <h1>Login today to track your expenses and save more!!</h1>
+ <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">
+  </div>
+ <div class="aside-two">
+ <h1>Start monitoring your spending and planing for the future </h1>
+ <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
+ </div>
+ </aside>
+ </section>
 
 
+   <!--footer-->
     </main>
-    <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
+    <footer>
+        <div class="footer">
+ <h2>Copyright 2021. Robert Gordon University SoC IT Module Project by Team J  </h2>
 
-<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
-opacity: 70%">
-<a class="text-white" href="privacy.html"><h6> Privacy Policy</h6>
-          <h6> Call us: +44470000000 </h6></a>
-  © 2020 Copyright: 
-  <a class="text-white" href="#">X-pense Tracker 2021 Inc. All Right Reserved.</a>
-</div>
-Copyright
-</footer> 
+        </div>
+    </footer>
 
     <?php
    

@@ -1,10 +1,3 @@
-/* For the Template layout */
-/* html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} */
-
 body {
     font-family: 'Open Sans', sans-serif;
     margin:0; 
@@ -18,8 +11,6 @@ body {
     width: 100%;
     height: 9.46%;
     background-color: #EFEFEF;
-    
-
 }
 
 .logo {
@@ -29,8 +20,8 @@ body {
 }
 
 ul > li > a{
-    color: #000;
-    text-decoration: none;
+    color:black
+    text-decorationnone;
     position: relative;
     top: 40px;
     font-size: 12px;
@@ -46,6 +37,7 @@ padding: 10px;
 }
 main{
     height: 100%;
+    background-color:antiquewhite;
 }
 
 .container {
@@ -54,9 +46,7 @@ main{
     overflow:hidden;
     width: auto;    
     min-height: 100%;
-    position: relative;
-   
-    
+    position: relative;  
 }
 
 h2 {
@@ -70,13 +60,11 @@ h2 {
     width: 100%;
     height: 100px;
     text-align: center;
-    background-color: #EFEFEF;
+    background-color: darkorchid;
 }
 
 
 /* Beginning of sign up main */
-
-
 h3 {
     text-align: center;
     font-size: 10px; 
@@ -96,11 +84,8 @@ h3 {
      width: 100%;
      height: 100%;
      position: absolute;
-     background-color: #EFEFEF; 
+     background-color:#EFEFEF
  } 
-
-
-
 form > input {
     display: inline-block;
     justify-content: center;
@@ -131,10 +116,7 @@ form > input {
     top: 200px;
     right: 0px;
     width: 300px;
-   
-
 }
-
 .block{
     width: 50%;
 	display: inline-block;
@@ -159,10 +141,10 @@ form > input {
    
  }  */
 
-
 /* End of sign up main */
 
 /* Beginning of sign in main */
+
 .form-wrapper-2 {
     width: 300px;
     height: 200px;
@@ -209,6 +191,7 @@ form > input {
     margin-top: 50px;
     background-color: #EFEFEF;
 }
+ 
 
 /*  banner for index.php */
 

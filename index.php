@@ -1,3 +1,8 @@
+<!-- 
+* "author: olaseni Ashorobi and Tomi Olatunji
+   Description: landing page
+   
+-->
 <!DOCTYPE html>
 <!-- This page links users to:
 * Sign-up page.
@@ -21,9 +26,7 @@
     <link href="assets/css/mdb.min.css" rel="stylesheet">
  <link href="material/css/ripples.min.css" rel="stylesheet">
 </head>
-
-<!--<div class="w3-container w3-blue">
--->
+<!--<div class="w3-container w3-blue">-->
 <header class="header">
 <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
@@ -37,9 +40,16 @@
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
+<<<<<<< HEAD
+    </header>  
+</div>
+<!--background Image-->
+    <style> 
+=======
  </header>  
 
     <style>
+>>>>>>> staging
 body  {
   background-image: url("assets/images/person_1.jpg");
   background-color: #f2f2f2;
@@ -65,8 +75,7 @@ body  {
                <a href="signup.php" class="btn btn-info" role="button">Sign Up here</a> 
             </section>
                 </div>
-
-            
+            <!--signin button here-->
     </main>
     <h2 style="font-size:20px; color:white;">Already Signed Up? Kindly click below</h2>
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
