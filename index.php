@@ -4,15 +4,23 @@
    
 -->
 <!DOCTYPE html>
+<!-- This page links users to:
+* Sign-up page.
+* Sign-in page.  -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>X-Pense App</title>
 
     <link href="assets/css/mdb.min.css" rel="stylesheet">
@@ -24,28 +32,45 @@
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
     
-    <h1 style="font-size:15px; justify-content: center; margin: auto;">This is the First student expense tracker</h1>
 
 <nav class="navbar">
     <ul class="nav-links">  
-    <li><a href="layout.php">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
+<<<<<<< HEAD
     </header>  
 </div>
 <!--background Image-->
     <style> 
+=======
+ </header>  
+
+    <style>
+>>>>>>> staging
 body  {
   background-image: url("assets/images/person_1.jpg");
   background-color: #f2f2f2;
+  /* background-repeat: cover; */
+
 }
 </style>
 
         <section >
-            <!--signup button here-->
-            <div class="bottomdown">Welcome to your first Student Expense App. Register an account Today</div>
+            <!-- Write your code here -->
+          
+            <div class="bottomdown" 
+            style="
+            color: #ffffff;
+             font-weight: bold;
+             font-size: 25px;
+             opacity: 80%;
+             text-align: center;
+             margin-bottom: 20px;
+             margin-top: 10px;"
+             >Welcome to your first Student Expense App. Register an account Today</div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-right">
                <a href="signup.php" class="btn btn-info" role="button">Sign Up here</a> 
             </section>
@@ -54,15 +79,18 @@ body  {
     </main>
     <h2 style="font-size:20px; color:white;">Already Signed Up? Kindly click below</h2>
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-               <a href="signin.php" class="link" role="link">Sign in here</a>
+               <a href="signin.php" class="animate__rubberBand link" role="link"
+                style="color: yellow; text-decoration: none; opacity: 80%">Sign in here</a>
   </div>
-           <!--footer here-->
-    <footer class="bg-dark text-center text-white">
+
+
+    
  
 
   <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
+  opacity: 70%">
   <a class="text-white" href="privacy.html"><h6> Privacy Policy</h6>
             <h6> Call us: +44470000000 </h6></a>
     © 2020 Copyright: 

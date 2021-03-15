@@ -1,7 +1,7 @@
 
 <!-- Author: Bright Osuagwu  -->
 <?php
-include('session.php')
+include('session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +23,15 @@ include('session.php')
     <?php 
     if (isset($_SESSION['user_id'])) {
     echo '<li><a href="index.php">Home</a></li>';
-    echo '<li><a href="userProfile/userprofile.php">Profile</a></li>';
+    echo '<li><a href="userprofile.php">Profile</a></li>';
     echo '<li><a href="includes/logoutUser.php">Logout</a></li>';
+    sleep(2);
     }
     else{
       echo '<li><a href="../index.php">Home</a></li>';
       echo '<li><a href="#">About</a></li>';
       echo '<li><a href="#">Contact Us</a></li>';
+      sleep(2);
     }
     
     ?>
@@ -40,25 +42,14 @@ include('session.php')
         <div class="container">
             <!-- Write your code here --> 
          
-           <h2>Welcome <?php echo $_SESSION['f_name']; ?>, you have successfully logged in.</h2>
+           <h2 style="margin-top: 50px; margin-left: 100px">Welcome <?php echo $_SESSION['f_name']; ?>, you have successfully logged in.</h2>
         </div>
-       
-       
-
-            
-       
-    
+     
     </main>
-    <footer>
-        <div class="footer">
-            <h4>Copyright 2021. Robert Gordon University SoC IT module</h4>
 
-        </div>
-    </footer>
+  
 
-    <?php
-   
-   ?>
-   <script src="script.js"></script>
+
+
 </body>
 </html>
