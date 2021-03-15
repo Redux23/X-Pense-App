@@ -112,14 +112,23 @@ session_start();
           if ($query->rowCount() > 0) {
               echo '<p class="alert alert-danger">The email address is already registered!</p>';
           }
-          if ($query->rowCount() == 0) {
+         
+          if($userPassword !== $confirmPassword){
+            echo '<p class="alert alert-danger">Passwords do not match!.</p>';
+
+          }
+          else if(strlen($userPassword) < 6){
+            echo '<p class="alert alert-danger">Password must have atleast 6 characters.</p>';
+ 
+          }
+
+           else if ($query->rowCount() == 0) {
               $query = $connection->prepare("INSERT INTO testusers_table(username,firstname,lastname,email,password) VALUES (:username,:firstname,:lastname,:email,:passwordHash)");
               $query->bindParam("username", $userName, PDO::PARAM_STR);
               $query->bindParam("firstname", $firstName, PDO::PARAM_STR);
               $query->bindParam("lastname", $lastName, PDO::PARAM_STR);
               $query->bindParam("email", $email, PDO::PARAM_STR);
               $query->bindParam("passwordHash", $passwordHash, PDO::PARAM_STR);
-              
               $result = $query->execute();
               if ($result) {
                   echo '<p class="alert alert-success">Your registration was successful!</p>';

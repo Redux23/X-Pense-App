@@ -72,12 +72,17 @@ session_start();
 
 
     </main>
-    <footer>
-        <div class="footer">
-            <h4>Copyright 2021. Robert Gordon University SoC IT Module Project by Team J  </h4>
+    <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
-        </div>
-    </footer>
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
+opacity: 70%">
+<a class="text-white" href="privacy.html"><h6> Privacy Policy</h6>
+          <h6> Call us: +44470000000 </h6></a>
+  © 2020 Copyright: 
+  <a class="text-white" href="#">X-pense Tracker 2021 Inc. All Right Reserved.</a>
+</div>
+Copyright
+</footer> 
 
     <?php
    
@@ -111,11 +116,12 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
                 $_SESSION['f_name'] = $result['firstname'];
                 $_SESSION['l_name'] = $result['lastname'];
                 $_SESSION['u_email'] = $result['email'];
-                $_SESSION['pwd'] = $result['password'];
+                
                 echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
                 sleep(3);
-                header('location: welcome.php');
+                header('location: userProfile/welcome.php');
             } else {
+                echo $user_id;
                 echo '<p class="alert alert-danger">Email & password combination is wrong!</p>';
             }
         }
