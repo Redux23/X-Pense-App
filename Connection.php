@@ -15,7 +15,7 @@
   if(!$connection){
           die('Connection Error: '.mysqli_connect_error());
       }else {
-          echo '<div style="
+          /*echo '<div style="
           width: 220px; 
           height: 50px; 
           background-color: green; 
@@ -24,7 +24,7 @@
           text-align: center; 
           opacity: 70%">
               <p style="color: #FFFFFF;">Connection Success!</p>
-          </div>';
+          </div>';*/
       }
 
 

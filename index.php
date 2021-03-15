@@ -1,3 +1,8 @@
+<!-- 
+* "author: olaseni Ashorobi and Tomi Olatunji
+   Description: landing page
+   
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +18,7 @@
     <link href="assets/css/mdb.min.css" rel="stylesheet">
  <link href="material/css/ripples.min.css" rel="stylesheet">
 </head>
-
-<!--<div class="w3-container w3-blue">
--->
+<!--<div class="w3-container w3-blue">-->
 <header class="header">
 <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
@@ -32,7 +35,8 @@
     </nav>
     </header>  
 </div>
-    <style>
+<!--background Image-->
+    <style> 
 body  {
   background-image: url("assets/images/person_1.jpg");
   background-color: #f2f2f2;
@@ -40,22 +44,19 @@ body  {
 </style>
 
         <section >
-            <!-- Write your code here -->
-          
+            <!--signup button here-->
             <div class="bottomdown">Welcome to your first Student Expense App. Register an account Today</div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-right">
                <a href="signup.php" class="btn btn-info" role="button">Sign Up here</a> 
             </section>
                 </div>
-
-            
+            <!--signin button here-->
     </main>
     <h2 style="font-size:20px; color:white;">Already Signed Up? Kindly click below</h2>
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                <a href="signin.php" class="link" role="link">Sign in here</a>
   </div>
-
-
+           <!--footer here-->
     <footer class="bg-dark text-center text-white">
  
 

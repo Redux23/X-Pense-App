@@ -9,7 +9,7 @@
     <title>X-Pense App</title>
 </head>
 <body>
- 
+    <!--header here-->
     <header class="header">
     <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
@@ -25,11 +25,10 @@
     <main class="container-2">
         <section >
             <!-- Write your code here -->
-          
             <h2>Welcome to your first Student Expense App. Register an Account Today</h2>
         
        </section>
-            
+            <!-- Form here-->
         <section class="form-wrapper-1">
             <div class="form-div-1">
                 <h3>New User? Sign Up Here</h3>
@@ -44,36 +43,34 @@
                 </form>
 
             </div>
-        </section>
-        
-    
+        </section>   
+    <!--Images here-->
     <section class="sidebar">
         <div class="block">
         <img src="assets/images/analyse.jpg"  class="advert-images" alt="analytics"/>
         </div>
         <div class="block">
-            <h4>If you have a Registered Account, Kindly Login <a href="signin.php">here</a></h4>
+            <h5>If you have a Registered Account, Kindly Login <a href="signin.php">here</a></h5>
         </div>
         
 </section>
             
 
-</div>
-        
-  
+</div>    
+  <!-- footer-->
 </main> 
     <footer>
         <div class="footer">
-            <h5>Copyright (c) 2021. Robert Gordon University SoC IT Module Project by Team J.</h5>
-
+    <h2>Copyright (c) 2021. Robert Gordon University SoC IT Module Project by Team J.</h> 
+          
         </div>
     </footer>
 
     <?php
  
 
-  function createNewUser(){
-      
+ if(isset($_POST['signup-button'])){
+
       //Initializing form inputfields variables
       $userName = trim($_POST['username']);
       $firstName = trim($_POST['firstname']);
@@ -84,7 +81,7 @@
       $passwordHash = password_hash($userPassword, PASSWORD_BCRYPT);
 
       require_once 'connection.php';
-      
+
      //Checking the DB to see if user already exists
       $sqlquery = "SELECT * FROM testusers_table WHERE email='$email' OR username='$userName'";
       $selectResult = mysqli_query($connection, $sqlquery);
@@ -160,11 +157,7 @@
      
 }
  
-
-
-    if(isset($_POST['signup-button'])){
-        createNewUser();
-    }
+    
      
 ?>
 
