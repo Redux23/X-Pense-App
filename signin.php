@@ -60,7 +60,10 @@ session_start();
                 </div>
             </section>
     </main>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
     <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
@@ -93,16 +96,23 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
         if (!$result) {
+<<<<<<< HEAD
             header("location: signin.php?error=wronglogin");
             exit(); 
 
         } if (password_verify($password, $result['password'])) {
+=======
+            echo '<p class="alert alert-danger">Email or password combination is wrong!</p>';
+        } else {
+            if (password_verify($password, $result['password'])) {
+>>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
                 $_SESSION['user_id'] = $result['user_ID'];
                 $_SESSION['userName'] = $result['username'];
                 $_SESSION['f_name'] = $result['firstname'];
                 $_SESSION['l_name'] = $result['lastname'];
                 $_SESSION['u_email'] = $result['email'];
                 
+<<<<<<< HEAD
                 //echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
                 sleep(1);
                 header("location: userProfile/welcome.php");
@@ -112,6 +122,14 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
                 exit(); 
                 
                // echo '<p class="alert alert-danger">Email & password combination is wrong!</p>';
+=======
+                echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
+                sleep(3);
+                header('location: userProfile/welcome.php');
+            } else {
+                echo $user_id;
+                echo '<p class="alert alert-danger">Email & password combination is wrong!</p>';
+>>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
             }
      }
     
