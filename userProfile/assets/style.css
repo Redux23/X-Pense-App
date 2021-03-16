@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    }
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    border: none;
+    justify-content: space-between;
+    width: 100%;
+    height: 9.46%;
+    background-color: #EFEFEF;
+    margin-bottom: 20px;
+
+}
+
+.logo {
+    width: 100px;
+    height: 94px;
+    padding: 5px;
+}
+
+ul > li > a{
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+    padding-right: 30px;
+}
+
+.nav-links {
+display: flex;
+justify-content: space-between;
+list-style-type: none;
+padding: 10px;
+
+}
+
+/* Sidebar Styling begins */
+
+
+.col-3{
+    position: fixed;
+    left: 0;
+    width: 40%;
+    height: 450px;
+    background-color: purple;
+
+
+}
+ .col-3 header{
+font-size: 22px;
+color: white;
+text-align: center;
+line-height: 20px;
+user-select: none;
+
+} */
+.col-3 ul a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(red, green, blue, alpha);
+    border-bottom: 1px solid black;
+    transition: 4s;
+    
+}
+.col-3 ul a i{
+margin-right: 16px;
+
+}
+
+
+/* End of Sidebar Styling*/
+ 
+
+

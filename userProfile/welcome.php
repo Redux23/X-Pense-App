@@ -1,3 +1,8 @@
+
+<!-- Author: Bright Osuagwu  -->
+<?php
+include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,31 +20,36 @@
     </div>
     <nav class="navbar">
     <ul class="nav-links">  
-    <li><a href="layout.php">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact Us</a></li>
+    <?php 
+    if (isset($_SESSION['user_id'])) {
+    echo '<li><a href="index.php">Home</a></li>';
+    echo '<li><a href="userprofile.php">Profile</a></li>';
+    echo '<li><a href="includes/logoutUser.php">Logout</a></li>';
+    sleep(2);
+    }
+    else{
+      echo '<li><a href="../index.php">Home</a></li>';
+      echo '<li><a href="#">About</a></li>';
+      echo '<li><a href="#">Contact Us</a></li>';
+      sleep(2);
+    }
+    
+    ?>
     </ul>
     </nav>
     </header>
     <main>
         <div class="container">
-            <!-- Write your code here -->
-            <h2>This is the main page</h2>
-
+            <!-- Write your code here --> 
+         
+           <h2 style="margin-top: 50px; margin-left: 100px">Welcome <?php echo $_SESSION['f_name']; ?>, you have successfully logged in.</h2>
         </div>
-    
-  
-    
+     
     </main>
-    <footer>
-        <div class="footer">
-            <h4>This is the footer!</h4>
 
-        </div>
-    </footer>
+  
 
-    <?php
-   
-   ?>
+
+
 </body>
 </html>
