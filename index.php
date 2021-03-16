@@ -40,48 +40,44 @@
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
-<<<<<<< HEAD
-    </header>  
 </div>
+    </header>  
+
 <!--background Image-->
-    <style> 
-=======
- </header>  
+
 
     <style>
->>>>>>> staging
-body  {
-  background-image: url("assets/images/person_1.jpg");
-  background-color: #f2f2f2;
-  /* background-repeat: cover; */
 
-}
-</style>
-
-        <section >
+        <section style="background-image: url(assets/images/person_1.jpg);
+             height: 400px;
+             ">
             <!-- Write your code here -->
           
-            <div class="bottomdown" 
+            <p class="bottomdown animate__animated animate__backInLeft" 
             style="
-            color: #ffffff;
+            color: #000;
              font-weight: bold;
              font-size: 25px;
              opacity: 80%;
              text-align: center;
-             margin-bottom: 20px;
              margin-top: 10px;"
-             >Welcome to your first Student Expense App. Register an account Today</div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-right">
-               <a href="signup.php" class="btn btn-info" role="button">Sign Up here</a> 
-            </section>
-                </div>
+
+             >Welcome to your Student Expense App. Sign-up today</p>
+           
+
             <!--signin button here-->
     </main>
-    <h2 style="font-size:20px; color:white;">Already Signed Up? Kindly click below</h2>
+    <div class="page-buttons">
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-               <a href="signin.php" class="animate__rubberBand link" role="link"
-                style="color: yellow; text-decoration: none; opacity: 80%">Sign in here</a>
+               <a href="signup.php" class="btn btn-info" role="button"
+               style="color: #ffffff; text-decoration: none; opacity: 80%; padding-left: 10px;">Sign Up here</a> 
+                </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+               <a href="signin.php" class="btn btn-dark" role="button"
+                style="color: #ffffff; text-decoration: none; opacity: 80%; padding-left: 10px;">Sign in here</a>
   </div>
+    </div>
+    </section>
 
 
     

@@ -1,8 +1,8 @@
+
 body {
     font-family: 'Open Sans', sans-serif;
-    margin:0; 
-    padding:0; 
-    box-sizing: border-box;
+
+
 }
 .header {
     display: flex;
@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: 9.46%;
     background-color: #EFEFEF;
+
 }
 
 .logo {
@@ -20,8 +21,9 @@ body {
 }
 
 ul > li > a{
-    color:black
-    text-decorationnone;
+
+    color: black;
+    text-decoration: none;
     position: relative;
     top: 40px;
     font-size: 12px;
@@ -35,25 +37,32 @@ list-style-type: none;
 padding: 10px;
 
 }
-main{
+
+
+.page-buttons {
+display: flex;
+justify-content: center;
+
+
+
+/* main{
     height: 100%;
     background-color:antiquewhite;
-}
+} */
 
-.container {
+/* .container {
     display: flex;
     justify-content: space-evenly;
     overflow:hidden;
     width: auto;    
     min-height: 100%;
     position: relative;  
-}
 
 h2 {
     text-align: center;
-}
+} */
 
-.footer {
+/* .footer {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -61,7 +70,7 @@ h2 {
     height: 100px;
     text-align: center;
     background-color: darkorchid;
-}
+
 
 
 /* Beginning of sign up main */
@@ -72,10 +81,11 @@ h3 {
  } 
 
   .form-wrapper-1{ 
-     width: 300px;
-     height: 320px;
+     width: 380px;
+     height: 460px;
      margin: 0 auto;
      position: relative;
+     margin-top: 20px;
      
  } 
 
@@ -83,6 +93,7 @@ h3 {
     display: block;
      width: 100%;
      height: 100%;
+     border-radius: 4px;
      position: absolute;
      background-color:#EFEFEF
  } 
@@ -94,13 +105,18 @@ form > input {
     border-radius: 3px;
     padding-top: 10px;
     padding-right: 20px;
-    margin-left: 70px;
+    margin-left: 100px;
     margin-bottom: 10px;
-    font-weight: lighter;
+    font-weight: bold;
     
 }
 
-.button {
+div > p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .button {
     background-color: #000;
     color: #FFFFFF;
     font-weight: 200;
@@ -109,7 +125,7 @@ form > input {
     margin-top: 10px;
     padding: 10px 15px;
     border: none;
-}
+} */
 
 .sidebar{
     position: absolute;
@@ -117,21 +133,6 @@ form > input {
     right: 0px;
     width: 300px;
 }
-.block{
-    width: 50%;
-	display: inline-block;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-}
- .advert-images {
-     width:200px;
-     height: 100px;
-     float: right;
-     margin-bottom: 10px;
-     position: relative;
-     /* bottom: 250px;    */
- }
 
   h4 {
     float: right;
@@ -139,61 +140,38 @@ form > input {
     bottom: 10px;  
     font-size: 11px;
    
- }  */
+
 
 /* End of sign up main */
 
 /* Beginning of sign in main */
 
 .form-wrapper-2 {
-    width: 300px;
-    height: 200px;
-    margin: auto;
-    border-radius: 4PX;
-    background-color: #EFEFEF;
-    position: relative;
-}
-
-
-.section-1 h4 {
-    text-align: center;
-}
-.form-info {
-    font-size: 11px;
-    text-align: center;
-}
-
-.form-div-2{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #EFEFEF; 
+    width: 380px;
+     height: 260px;
+     margin: 0 auto;
+     position: relative;
+     margin-top: 80px;
 } 
 
-.button-2 {
-    background-color: #000;
-    color: #FFFFFF;
-    font-weight: 200;
-    display: inline-block;
-    text-align: center !important;
-    border-radius: 3px;
-    margin-top: 10px;
-    margin-left: 70px;
-    padding: 10px 15px;
-    border: none;
+.form-div-2{
+    display: block;
+     width: 100%;
+     height: 100%;
+     border-radius: 4px;
+     position: absolute;
+     background-color:#EFEFEF
 }
+
+
+
 
 /* End of signin main */
 
 
-.card-display {
-
-    margin-top: 50px;
-    background-color: #EFEFEF;
-}
- 
-
 /*  banner for index.php */
+
+
 
  
 
