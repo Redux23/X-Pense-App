@@ -37,6 +37,7 @@ session_start();
     </header>
 
 
+
     <main>
             <!-- Write your code here -->
             <section class="form-wrapper-2">
@@ -60,10 +61,7 @@ session_start();
                 </div>
             </section>
     </main>
-<<<<<<< HEAD
 
-=======
->>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
     <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
@@ -75,6 +73,38 @@ opacity: 70%">
 </div>
 Copyright
 </footer> 
+
+    <main class="container">
+    <section>
+                <h2>kindly Login to access your account</h2>
+              <!--Form-->
+              <form>
+                <form action="signin.php" methods="post" id="create-form">
+                    <input type="email" placeholder="Email" name="email">
+                    <br> 
+                    <input type="password" placeholder="Password"  name="password">
+                    <br>
+                    <input type="submit" value="Login">
+     </form>
+     <!--Images here-->
+ </section>
+ <section class="section-2">
+ <aside class="side-bar">
+ <div class="aside-one">
+ <h1>Login today to track your expenses and save more!!</h1>
+ <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">
+  </div>
+ <div class="aside-two">
+ <h1>Start monitoring your spending and planing for the future </h1>
+ <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
+ </div>
+ </aside>
+ </section>
+
+
+   <!--footer-->
+    </main>
+
 
 </body>
 
@@ -96,23 +126,21 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
         if (!$result) {
-<<<<<<< HEAD
+
             header("location: signin.php?error=wronglogin");
             exit(); 
 
         } if (password_verify($password, $result['password'])) {
-=======
-            echo '<p class="alert alert-danger">Email or password combination is wrong!</p>';
         } else {
             if (password_verify($password, $result['password'])) {
->>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
+
                 $_SESSION['user_id'] = $result['user_ID'];
                 $_SESSION['userName'] = $result['username'];
                 $_SESSION['f_name'] = $result['firstname'];
                 $_SESSION['l_name'] = $result['lastname'];
                 $_SESSION['u_email'] = $result['email'];
                 
-<<<<<<< HEAD
+
                 //echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
                 sleep(1);
                 header("location: userProfile/welcome.php");
@@ -120,16 +148,7 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
             } else {
                 header("location: signin.php?error=wronglogin");
                 exit(); 
-                
-               // echo '<p class="alert alert-danger">Email & password combination is wrong!</p>';
-=======
-                echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
-                sleep(3);
-                header('location: userProfile/welcome.php');
-            } else {
-                echo $user_id;
-                echo '<p class="alert alert-danger">Email & password combination is wrong!</p>';
->>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
+
             }
      }
     

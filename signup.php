@@ -46,8 +46,9 @@ session_start();
     background: url(assets/images/journey.jpg);">
         <section>
             <!-- Write your code here -->
+
             
-        
+
        </section>
             <!-- Form here-->
         <section class="form-wrapper-1">
@@ -81,17 +82,20 @@ if (isset($_GET["error"])) {
                     <input type="password" placeholder="Confirm Password" name="confirm-password" required/>
                     <button type="submit" class="btn btn-dark" name="signup-button" style="margin-left: 100px;">Sign Up</button>
                 </form>
+
                 <div class="block animate__animated animate__fadeInUp">
             <p>Already signed up?, kindly login <a href="signin.php">here</a></p>
         </div>
             </div>
         </section>   
- 
+
             
 
 </div>    
   <!-- footer-->
 </main> 
+
+
 
 
     <?php
