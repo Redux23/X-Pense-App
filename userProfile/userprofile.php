@@ -109,7 +109,6 @@ require_once '../db/connection.php';
     </div> 
     <div class="form-group">
     <input type="text" placeholder="Budget" name="budget" class="form-control">
-<<<<<<< HEAD
     </div>
     <div class="form-group">
     <input type="text" placeholder="Expense" name="expense" class="form-control">
@@ -121,19 +120,6 @@ require_once '../db/connection.php';
     <button class="btn btn-primary btn-lg" name="save-value">Save</button>
     </form>
     </div>
-=======
-    </div>
-    <div class="form-group">
-    <input type="text" placeholder="Expense" name="expense" class="form-control">
-    </div>
-    
-    <!-- <div class="form-group">
-    <input type="text" placeholder="Description" name="description" class="form-control">
-    </div> -->
-    <button class="btn btn-primary btn-lg" name="save-value">Save</button>
-    </form>
-    </div>
->>>>>>> 07d86f440dcfaf2797009749997ee711d24e4e3c
  
  </div>  
     </div>

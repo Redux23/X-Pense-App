@@ -61,7 +61,6 @@ session_start();
                 </div>
             </section>
     </main>
-
     <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
@@ -126,12 +125,10 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
         if (!$result) {
-
             header("location: signin.php?error=wronglogin");
             exit(); 
 
-        } if (password_verify($password, $result['password'])) {
-        } else {
+        } 
             if (password_verify($password, $result['password'])) {
 
                 $_SESSION['user_id'] = $result['user_ID'];
@@ -140,7 +137,6 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
                 $_SESSION['l_name'] = $result['lastname'];
                 $_SESSION['u_email'] = $result['email'];
                 
-
                 //echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
                 sleep(1);
                 header("location: userProfile/welcome.php");
@@ -148,8 +144,7 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
             } else {
                 header("location: signin.php?error=wronglogin");
                 exit(); 
-
             }
-     }
+        }
     
 ?>
