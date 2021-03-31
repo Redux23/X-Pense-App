@@ -40,10 +40,13 @@
     <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
-    </header>  
 </div>
+    </header>  
+
 <!--background Image-->
 
+
+    <style>
 
         <section style="background-image: url(assets/images/person_1.jpg);
              height: 400px;
@@ -58,9 +61,10 @@
              opacity: 80%;
              text-align: center;
              margin-top: 10px;"
+
              >Welcome to your Student Expense App. Sign-up today</p>
            
-                
+
             <!--signin button here-->
     </main>
     <div class="page-buttons">
