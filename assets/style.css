@@ -43,14 +43,14 @@ padding: 10px;
 display: flex;
 justify-content: center;
 
-
+}
 
 /* main{
     height: 100%;
     background-color:antiquewhite;
 } */
 
-/* .container {
+.container {
     display: flex;
     justify-content: space-evenly;
     overflow:hidden;
@@ -58,6 +58,8 @@ justify-content: center;
     min-height: 100%;
     position: relative;  
 
+}
+/*
 h2 {
     text-align: center;
 } */
@@ -70,10 +72,11 @@ h2 {
     height: 100px;
     text-align: center;
     background-color: darkorchid;
-
-
+}
+*/
 
 /* Beginning of sign up main */
+
 h3 {
     text-align: center;
     font-size: 10px; 
@@ -140,7 +143,7 @@ div > p {
     bottom: 10px;  
     font-size: 11px;
    
-
+  }
 
 /* End of sign up main */
 
@@ -171,9 +174,6 @@ div > p {
 
 /*  banner for index.php */
 
-
-
- 
 
 
 
