@@ -2,10 +2,10 @@
 
 
  //Creating a connection to our database
-      $servername = 'localhost';
-      $username = 'root';
-      $password = '';
-      $databasename = 'test_database';
+      $servername = 'remotemysql.com';
+      $username = 'mSQEp2plPc';
+      $password = '6yqr51s8IE';
+      $databasename = 'mSQEp2plPc';
 
       $connection = mysqli_connect($servername, $username, $password, $databasename);
 
