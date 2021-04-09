@@ -56,9 +56,9 @@
 
             <!-- Daily Expense Interface  -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="dailytable.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Daily Expenses</span></a>
+                    <span>Daily Expenses</span></a>s
             </li>
 
             <!-- Nav Item - Tables -->
