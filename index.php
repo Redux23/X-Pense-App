@@ -46,7 +46,7 @@
 <!--background Image-->
 
 
-    <style>
+  
 
         <section style="background-image: url(assets/images/person_1.jpg);
              height: 400px;
