@@ -380,9 +380,9 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
-                                            <th>Daily Expense</th>
-                                            <th>Expense Amount</th>
+                                            <th>Daily Expense Description</th>
                                             <th>Budget</th>
+                                            <th>xpense Amount</th>
                                             <th>Balance</th>
                                          
                                         </tr>
@@ -391,8 +391,8 @@
                                         <tr>
                                             <th>Sheni</th>
                                             <th>Data subscription</th>
-                                            <th>500</th>
                                             <th>1000</th>
+                                            <th>500</th>
                                             <th>500</th>
                                         </tr>
                                     </tfoot>
@@ -400,43 +400,43 @@
                                         <tr>
                                             <th>Abisoye</th>
                                             <th>Cable TV</th>
-                                            <th>200</th>
                                             <th>1000</th>
+                                            <th>200</th>
                                             <th>800</th>
                                         </tr>
                                         <tr>
                                             <th>Tayo</th>
                                             <th>Electricity</th>
-                                            <th>300</th>
                                             <th>1000</th>
+                                            <th>300</th>
                                             <th>700</th>
                                         </tr>
                                         <tr>
                                             <th>Ngozi</th>
                                             <th>Groceries</th>
-                                            <th>50</th>
                                             <th>1000</th>
+                                            <th>50</th>
                                             <th>950</th>
                                         </tr>
                                         <tr>
                                             <th>Namdi</th>
                                             <th>Toiletries</th>
-                                            <th>50</th>
                                             <th>1000</th>
+                                            <th>50</th>
                                             <th>950</th>
                                         </tr>
                                         <tr>
                                             <th>John</th>
                                             <th>Feeding</th>
-                                            <th>100</th>
                                             <th>1000</th>
+                                            <th>100</th>
                                             <th>900</th>
                                         </tr>
                                         <tr>
                                             <th>Janet</th>
                                             <th>Transportation</th>
-                                            <th>70</th>
                                             <th>1000</th>
+                                            <th>70</th>
                                             <th>930</th>
                                         </tr>
 
