@@ -58,7 +58,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="dailytable.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Daily Expenses</span></a>s
+                    <span>Daily Expenses</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -70,14 +70,14 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="monthlyexp.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Monthly Expenses</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="chart.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
@@ -241,7 +241,7 @@
                                             <label for="exampleFormControlTextarea1">Description</label>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Item desc..."></textarea>
                                         </div>
-
+                                        <button type="button" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
                             </div>
