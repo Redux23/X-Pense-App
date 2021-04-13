@@ -14,16 +14,18 @@ include('session.php');
     <title>X-Pense App</title>
 </head>
 <body>
+    <!-- Header section starts here -->
     <header class="header">
     <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
     <nav class="navbar">
     <ul class="nav-links">  
+        <!-- session navbar for signed in users -->
     <?php 
     if (isset($_SESSION['user_id'])) {
     echo '<li><a href="index.php">Home</a></li>';
-    echo '<li><a href="userprofile.php">Profile</a></li>';
+    echo '<li><a href="../dashboard/index.php">Profile</a></li>';
     echo '<li><a href="includes/logoutUser.php">Logout</a></li>';
     sleep(2);
     }
