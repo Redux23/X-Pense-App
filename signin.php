@@ -39,10 +39,12 @@ session_start();
 
 
     <main>
-            <!-- Write your code here -->
+            <!-- Signin in form -->
+
             <section class="form-wrapper-2">
                 <div class="form-div-2">
                     <p>Login to access your account</p>
+                    <!-- User validation notification -->
                     <?php 
                      if (isset($_GET["error"])) {
                        if ($_GET["error"] == "wronglogin") {
@@ -60,7 +62,10 @@ session_start();
                     </form>
                 </div>
             </section>
+            <!-- Form ends here -->
     </main>
+
+    <!-- Footer starts here -->
     <footer class="text-center text-white fixed-bottom" style="background-color: #21081a; margin-top: 200px;">
 
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);
@@ -72,7 +77,7 @@ opacity: 70%">
 </div>
 Copyright
 </footer> 
-
+<!-- Footer ends here -->
     <main class="container">
     <section>
                 <h2>kindly Login to access your account</h2>
