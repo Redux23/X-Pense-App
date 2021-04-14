@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +10,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Xpense Tracker | Userpage</title>
 
-    <!-- Custom fonts for this template -->
+    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -38,17 +34,17 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Welcome User</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Expense Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -59,20 +55,40 @@
                 Interface
             </div>
 
+            <!-- Daily Expense Interface  -->
+            <li class="nav-item">
+                <a class="nav-link" href="dailytable.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Daily Expenses</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Weekly Expenses</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="monthlyexp.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Monthly Expenses</span></a>
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="chart.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
 
-            <!-- Nav Item - Logout -->
-            <li class="nav-item active">
-                <a class="nav-link" href="Logout.php">
+            <!-- Nav Item - Tables
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Logout</span></a>
-            </li>
+                    <span>Tables</span></a>
+            </li>-->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -81,6 +97,7 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -298,50 +315,43 @@
                                             <th>Balance</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>January</th>
-                                            <th>10000</th>
-                                            <th>5000</th>
-                                            <th>5000</th>
-                                        </tr>
-                                    </tfoot>
+                                    
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Feeding</td>
                                             <td>January</td>
+                                            <td>90,000</td>
+                                            <td>30,000</td>
                                             <td>60,000</td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>Feeding</td>
                                             <td>February</td>
-                                            <td>60,000</td>
+                                            <td>200,000</td>
+                                            <td>50,000</td>
+                                            <td>150,000</td>
                                         </tr>
                                         <tr>
-                                            <td>3</td>
-                                            <td>Feeding</td>
                                             <td>March</td>
-                                            <td>60,000</td>
+                                            <td>100,000</td>
+                                            <td>20,000</td>
+                                            <td>80,000</td>
                                         </tr>
                                         <tr>
-                                            <td>4</td>
-                                            <td>Feeding</td>
                                             <td>April</td>
                                             <td>60,000</td>
+                                            <td>10,000</td>
+                                            <td>50,000</td>
                                         </tr>
                                         <tr>
-                                            <td>5</td>
-                                            <td>Feeding</td>
-                                            <td>May</td>
-                                            <td>60,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Feeding</td>
                                             <td>June</td>
+                                            <td>75,000</td>
+                                            <td>15,000</td>
                                             <td>60,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>90,000</td>
+                                            <td>60,000</td>
+                                            <td>30,000</td>
                                         </tr>
                                         
                                     </tbody>
