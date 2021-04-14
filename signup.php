@@ -116,7 +116,7 @@ if (isset($_GET["error"])) {
         $confirmPassword = trim($_POST['confirm-password']);
         $passwordHash = password_hash($userPassword, PASSWORD_DEFAULT);
 
-          $query = $connection->prepare("SELECT * FROM testusers_table WHERE email=:email");
+          $query = $connection->prepare("SELECT * FROM user WHERE email=:email");
           $query->bindParam("email", $email, PDO::PARAM_STR);
           $query->execute();
           if ($query->rowCount() > 0) {
@@ -139,7 +139,7 @@ if (isset($_GET["error"])) {
           }
 
            else if ($query->rowCount() == 0) {
-              $query = $connection->prepare("INSERT INTO testusers_table(username,firstname,lastname,email,password) VALUES (:username,:firstname,:lastname,:email,:passwordHash)");
+              $query = $connection->prepare("INSERT INTO user(username,firstname,lastname,email,password) VALUES (:username,:firstname,:lastname,:email,:passwordHash)");
               $query->bindParam("username", $userName, PDO::PARAM_STR);
               $query->bindParam("firstname", $firstName, PDO::PARAM_STR);
               $query->bindParam("lastname", $lastName, PDO::PARAM_STR);
