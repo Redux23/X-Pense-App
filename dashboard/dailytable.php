@@ -63,7 +63,7 @@
 <li class="nav-item">
     <a class="nav-link" href="dailytable.php">
         <i class="fas fa-fw fa-table"></i>
-        <span>Daily Expenses</span></a>s
+        <span>Daily Expenses</span></a>
 </li>
 
 <!-- Nav Item - Tables -->
