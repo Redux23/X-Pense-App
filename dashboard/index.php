@@ -1,3 +1,6 @@
+<?php  
+include('../userProfile/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +59,7 @@
 
             <!-- Daily Expense Interface  -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="dailytable.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Daily Expenses</span></a>
             </li>
@@ -70,14 +73,14 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="monthlyexp.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Monthly Expenses</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="chart.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
@@ -141,7 +144,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../includes/logoutUser.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -241,7 +244,7 @@
                                             <label for="exampleFormControlTextarea1">Description</label>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Item desc..."></textarea>
                                         </div>
-
+                                        <button type="button" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
                             </div>
