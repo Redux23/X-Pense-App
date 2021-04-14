@@ -2,18 +2,18 @@
 
 
  //Creating a connection to our database
-    //   $servername = 'remotemysql.com';
-    //   $username = 'mSQEp2plPc';
-    //   $password = '6yqr51s8IE';
-    //   $databasename = 'mSQEp2plPc';
+    //  $servername = 'remotemysql.com';
+    // $username = 'mSQEp2plPc';
+    // $password = '6yqr51s8IE';
+    // $databasename = 'mSQEp2plPc';
 
-      $servername = 'localhost';
-      $username = 'root';
-      $password = 'HoastDB012388.';
-      $databasename = 'test_database';
+    //   $servername = 'localhost';
+    //   $username = 'root';
+    //   $password = 'HoastDB012388.';
+    //   $databasename = 'test_database';
 
 
-      $connection = mysqli_connect($servername, $username, $password, $databasename);
+      //$connection = mysqli_connect($servername, $username, $password, $databasename);
 
 
       //check if connection is successful
