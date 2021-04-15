@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Weekly Table</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,17 +29,16 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-         <!-- Sidebar -->
-         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-<!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-    <div class="sidebar-brand-icon rotate-n-15">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3">Welcome User</div>
-</a>
+        </div>
+        <div class="sidebar-brand-text mx-3">Welcome User</div>
+    </a>
 
 <!-- Divider -->
 <hr class="sidebar-divider my-0">
@@ -59,7 +58,7 @@
     Interface
 </div>
 
-<!-- Daily Expense Interface -->
+<!-- Daily Expense Interface  -->
 <li class="nav-item">
     <a class="nav-link" href="dailytable.php">
         <i class="fas fa-fw fa-table"></i>
@@ -82,7 +81,7 @@
 
 <!-- Nav Item - Charts -->
 <li class="nav-item">
-    <a class="nav-link" href="chart.php">
+    <a class="nav-link" href="charts.php">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Charts</span></a>
 </li>
@@ -105,6 +104,7 @@
 
 </ul>
 <!-- End of Sidebar -->
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -337,68 +337,145 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Daily Expense Description</th>
-                                            <th>Budget</th>
-                                            <th>xpense Amount</th>
+                                            <th>Weeks</th>
+                                            <th>Weekly Expense</th>
+                                            <th>Weekly Earning</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
                                             <th>Balance</th>
-                                         
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Sheni</th>
-                                            <th>Data subscription</th>
-                                            <th>1000</th>
-                                            <th>500</th>
-                                            <th>500</th>
+                                            <th>Weeks</th>
+                                            <th>Weekly Expense</th>
+                                            <th>Weekly Earning</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                            <th>Balance</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <th>Abisoye</th>
-                                            <th>Cable TV</th>
-                                            <th>1000</th>
-                                            <th>200</th>
-                                            <th>800</th>
+                                            <td>wk1</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/01</td>
+                                            <td>2021/01/07</td>
+                                            <td>72 pounds</td>
                                         </tr>
                                         <tr>
-                                            <th>Tayo</th>
-                                            <th>Electricity</th>
-                                            <th>1000</th>
-                                            <th>300</th>
-                                            <th>700</th>
+                                            <td>wk2</td>
+                                            <td> 15 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/08</td>
+                                            <td>2021/01/14</td>
+                                            <td>75 pounds</td>
                                         </tr>
                                         <tr>
-                                            <th>Ngozi</th>
-                                            <th>Groceries</th>
-                                            <th>1000</th>
-                                            <th>50</th>
-                                            <th>950</th>
+                                            <td>wk3</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/15</td>
+                                            <td>2021/01/21</td>
+                                            <td>72 pounds</td>
                                         </tr>
                                         <tr>
-                                            <th>Namdi</th>
-                                            <th>Toiletries</th>
-                                            <th>1000</th>
-                                            <th>50</th>
-                                            <th>950</th>
+                                            <td>wk4</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/22</td>
+                                            <td>2021/01/28</td>
+                                            <td>72 pounds</td>
                                         </tr>
                                         <tr>
-                                            <th>John</th>
-                                            <th>Feeding</th>
-                                            <th>1000</th>
-                                            <th>100</th>
-                                            <th>900</th>
+                                            <td>wk5</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/29</td>
+                                            <td>2021/02/04</td>
+                                            <td>72 pounds</td>
                                         </tr>
                                         <tr>
-                                            <th>Janet</th>
-                                            <th>Transportation</th>
-                                            <th>1000</th>
-                                            <th>70</th>
-                                            <th>930</th>
+                                            <td>wk6</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/02/05</td>
+                                            <td>2021/02/11</td>
+                                            <td>72 pounds</td>  
                                         </tr>
-
-                                        
+                                        <tr>
+                                            <td>wk7</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/02/12</td>
+                                            <td>2021/02/18</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk8</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/02/19</td>
+                                            <td>2021/02/25</td>
+                                            <td>72 pounds</td> 
+                                        </tr>
+                                        <tr>
+                                            <td>wk9</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/02/26</td>
+                                            <td>2021/03/04</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk10</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/03/05</td>
+                                            <td>2021/03/11</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk11</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/03/12</td>
+                                            <td>2021/03/18</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk12</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/03/19</td>
+                                            <td>2021/03/25</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk13</td>
+                                            <td>18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/03/26</td>
+                                            <td>2021/04/01</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk14</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/22</td>
+                                            <td>2021/01/28</td>
+                                            <td>72 pounds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wk4</td>
+                                            <td> 18 pounds</td>
+                                            <td>90 pounds</td>
+                                            <td>2021/01/22</td>
+                                            <td>2021/01/28</td>
+                                            <td>72 pounds</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -458,6 +535,7 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
