@@ -65,35 +65,36 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
 
 
 
-if (isset($_POST['login'])) {
+    if (isset($_POST['login'])) {
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-    $query = $connection->prepare("SELECT * FROM testusers_table WHERE email=:email");
-    $query->bindParam("email", $email, PDO::PARAM_STR);
-    $query->execute();
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-    if (!$result) {
-        header("location: signin.php?error=wronglogin");
-        exit();
-    }
-    if (password_verify($password, $result['password'])) {
+        $query = $connection->prepare("SELECT * FROM user WHERE email=:email");
+        $query->bindParam("email", $email, PDO::PARAM_STR);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if (!$result) {
+            header("location: signin.php?error=wronglogin");
+            exit(); 
 
-        $_SESSION['user_id'] = $result['user_ID'];
-        $_SESSION['userName'] = $result['username'];
-        $_SESSION['f_name'] = $result['firstname'];
-        $_SESSION['l_name'] = $result['lastname'];
-        $_SESSION['u_email'] = $result['email'];
+        } 
+            if (password_verify($password, $result['password'])) {
 
-        //echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
-        sleep(1);
-        header("location: userProfile/welcome.php");
-        exit();
-    } else {
-        header("location: signin.php?error=wronglogin");
-        exit();
-    }
-}
-
+                $_SESSION['user_id'] = $result['user_ID'];
+                $_SESSION['userName'] = $result['username'];
+                $_SESSION['f_name'] = $result['firstname'];
+                $_SESSION['l_name'] = $result['lastname'];
+                $_SESSION['u_email'] = $result['email'];
+                
+                //echo '<p class="alert alert-success">Congratulations, you are logged in!</p>';
+                sleep(1);
+                header("location: userProfile/welcome.php");
+                exit(); 
+            } else {
+                header("location: signin.php?error=wronglogin");
+                exit(); 
+            }
+        }
+    
 ?>
