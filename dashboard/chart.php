@@ -1,3 +1,6 @@
+<?php  
+include('../userProfile/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +40,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Welcome User</div>
+    <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['userName'];?></div>
      </a>
 
      <!-- Divider -->
@@ -284,7 +287,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Your chart</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -321,11 +324,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-                    <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme.
-                        The charts below have been customized - for further customization options, please visit the <a
-                            target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js
-                            documentation</a>.</p>
-
+                    
                     <!-- Content Row -->
                     <div class="row">
 
