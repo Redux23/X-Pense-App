@@ -125,7 +125,7 @@ require_once 'db/connection.php'; //Establishing connection with our database*/
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query = $connection->prepare("SELECT * FROM testusers_table WHERE email=:email");
+        $query = $connection->prepare("SELECT * FROM user WHERE email=:email");
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);

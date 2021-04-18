@@ -69,8 +69,9 @@ if (isset($_GET["error"])) {
           echo '<p class="alert alert-danger" style="text-align: center; padding: 5px; margin:20px;">Oops! something went wrong, kindly try again.</p>';
           }
           else if ($_GET["error"] == "none") {
+            //header("location: ./signin.php");
             echo '<p
-            class="alert alert-success" style="text-align: center; padding: 5px; margin:20px;">Account created succesfully!</p>';
+            class="alert alert-success" style="text-align: center; padding: 5px; margin:20px;">Account created succesfully!<a href="./signin.php">Click Here to Login</a></p>';
             }
 }
 ?>
