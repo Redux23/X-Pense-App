@@ -14,23 +14,27 @@ include('session.php');
     <title>X-Pense App</title>
 </head>
 <body>
+    <!-- Header section starts here -->
     <header class="header">
     <div class="images">
     <img src="assets/images/xpenseLogo.png" class="logo" alt="X-Pense App">
     </div>
     <nav class="navbar">
     <ul class="nav-links">  
+        <!-- session navbar for signed in users -->
     <?php 
     if (isset($_SESSION['user_id'])) {
-    echo '<li><a href="index.php">Home</a></li>';
-    echo '<li><a href="userprofile.php">Profile</a></li>';
-    echo '<li><a href="includes/logoutUser.php">Logout</a></li>';
+    
+    echo '<li><a href="../index.php">Home</a></li>';
+      echo '<li><a href="#">About</a></li>';
+      
     sleep(2);
     }
     else{
-      echo '<li><a href="../index.php">Home</a></li>';
-      echo '<li><a href="#">About</a></li>';
-      echo '<li><a href="#">Contact Us</a></li>';
+        echo '<li><a href="index.php">Home</a></li>';
+        echo '<li><a href="#">Contact Us</a></li>';
+        echo '<li><a href="../dashboard/index.php">Dashboard</a></li>';
+        echo '<li><a href="../includes/logoutUser.php">Logout</a></li>';
       sleep(2);
     }
     
@@ -41,7 +45,7 @@ include('session.php');
     <main>
         <div class="container">
             <!-- Write your code here --> 
-         
+           
            <h2 style="margin-top: 50px; margin-left: 100px">Welcome <?php echo $_SESSION['f_name']; ?>, you have successfully logged in.</h2>
         </div>
      

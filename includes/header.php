@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+include('../userProfile/session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
