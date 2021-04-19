@@ -60,7 +60,7 @@ include 'sendemail.php';
         <a class="nav-link" style="font-size: 11px;" href="contact.php">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="font-size: 11px;" href="includes/logoutUser.php">Logout</a>
+        <a class="nav-link" style="font-size: 11px;" href="../includes/logoutUser.php">Logout</a>
       </li>
     </ul>';
     }else{

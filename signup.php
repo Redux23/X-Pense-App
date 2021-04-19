@@ -108,7 +108,7 @@ if (isset($_POST['signup-button'])) {
     if ($result) {
       header("location: signup.php?error=none");
       exit(); // End function
-      //echo '<p class="alert alert-success">Your registration was successful!</p>';
+      echo 'Last Id was: '.$connection->lastInsertId();;
     } else {
       header("location: signup.php?error=stmtfailed");
       exit(); // End function
