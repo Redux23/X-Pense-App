@@ -106,35 +106,8 @@ opacity: 70%">
 Copyright
 </footer> 
 <!-- Footer ends here -->
-    <main class="container">
-    <section>
-                <h2>kindly Login to access your account</h2>
-              <!--Form-->
-              <form>
-                <form action="signin.php" methods="post" id="create-form">
-                    <input type="email" placeholder="Email" name="email">
-                    <br> 
-                    <input type="password" placeholder="Password"  name="password">
-                    <br>
-                    <input type="submit" value="Login">
-     </form>
-     <!--Images here-->
- </section>
- <section class="section-2">
- <aside class="side-bar">
- <div class="aside-one">
- <h1>Login today to track your expenses and save more!!</h1>
- <img src="assets/images/coins.jpg" width="100px" height="100px" alt="coins">
-  </div>
- <div class="aside-two">
- <h1>Start monitoring your spending and planing for the future </h1>
- <img src="assets/images/journey.jpg" width="100px" height="100px" alt="journey">
- </div>
- </aside>
- </section>
+ 
 
-
-   <!--footer-->
     </main>
 
 
