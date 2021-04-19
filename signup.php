@@ -64,8 +64,6 @@ require_once 'db/connection.php';
 
 <?php
 
-
-
 //Initializing form inputfields variables
 require_once 'db/connection.php';
 

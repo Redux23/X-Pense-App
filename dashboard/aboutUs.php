@@ -1,5 +1,6 @@
 <!-- Header section -->
 <header class="header">
+    
     <?php include_once 'header.php'; ?>
 </header>
 
@@ -23,7 +24,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Bright Osuagwu</h5>
-                        <small class="text-muted">Information Tech (Cyber Security)</small>
+                        <small class="text-muted">MSc Information Tech (Cyber Security)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">
@@ -44,7 +45,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Oluwatomisin Olatunji</h5>
-                        <small class="text-muted">Information Tech (Business Intelligence)</small>
+                        <small class="text-muted">MSc Information Tech (Business Intelligence)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">
@@ -65,7 +66,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Oluwafunmilola Akinoso</h5>
-                        <small class="text-muted">Information Tech (Cyber Security)</small>
+                        <small class="text-muted">MSc Information Tech (Cyber Security)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">
@@ -86,7 +87,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Olaseni Ashorobi</h5>
-                        <small class="text-muted">Information Tech (Cyber Security)</small>
+                        <small class="text-muted">MSc Information Tech (Cyber Security)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">
@@ -107,7 +108,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Okechukwu Akanno</h5>
-                        <small class="text-muted">Information Tech (Business Intelligence)</small>
+                        <small class="text-muted">MSc Information Tech (Business Intelligence)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">
@@ -128,7 +129,7 @@
                     </div>
                     <div class="team-info py-3 text-center">
                         <h5 class="mb-0">Chiedozie Ogujiuba</h5>
-                        <small class="text-muted">Information Tech (Cyber Security)</small>
+                        <small class="text-muted">MSc Information Tech (Cyber Security)</small>
                     </div>
                     <div class="team-members-overlay">
                         <div class="text-center mt-2">

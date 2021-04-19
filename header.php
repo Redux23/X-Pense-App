@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 ?>
 <!-- This page links users to:
@@ -51,7 +51,7 @@ session_start();
   <div class="collapse navbar-collapse justify-content-between" id="navbarText">
 
   <?php 
-    if (isset($_SESSION['userid'])) {
+    if (isset($_SESSION['user_id'])) {
    echo '<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="">Profile<span class="sr-only">(current)</span></a>
@@ -65,7 +65,6 @@ session_start();
     </ul>';
     }else{
       
-    
       echo '<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
       <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>

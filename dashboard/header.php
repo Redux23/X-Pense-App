@@ -12,14 +12,14 @@ include 'sendemail.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xpense App | <?php echo $title; ?></title>
+
   <!-- Linking the gobal stylesheet -->
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
  
   <!-- Bootstrap CSS -->
@@ -51,25 +51,32 @@ include 'sendemail.php';
   <div class="collapse navbar-collapse justify-content-between" id="navbarText">
 
   <?php 
-    if (isset($_SESSION['userid'])) {
-   echo '<ul class="navbar-nav ml-auto">
+    if (isset($_SESSION['user_id'])) {
+      echo '<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span></a>
+        <a class="nav-link" style="font-size: 11px;" href="index.php">Profile<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" style="font-size: 11px;" href="contact.php">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="includes/logoutUser.php">Logout</a>
+        <a class="nav-link" style="font-size: 11px;" href="includes/logoutUser.php">Logout</a>
       </li>
     </ul>';
     }else{
-      
-        echo '<ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="includes/logoutUser.php">Logout</a>
-        </li>
+ 
+      echo '<ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+      <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>';
+      echo '<li class="nav-item">
+      <a class="nav-link" href="dashboard/aboutUs.php">About</a>
+      </li>';
+      echo '<li class="nav-item">
+      <a class="nav-link" href="dashboard/contact.php">Contact Us</a>
+      </li>
       </ul>';
+      
       
     }
     ?>

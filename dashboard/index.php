@@ -1,5 +1,6 @@
 <?php  
 include('../userProfile/session.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,20 +140,18 @@ include('../userProfile/session.php');
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Contact Us
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="aboutUs.php">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
+                                    About
                                 </a>
                               
                                <div class="dropdown-divider"></div>
-                               <?php
-                                if (isset($_SESSION['userid'])){
-                                    echo '<a class="dropdown-item" href="../includes/logoutUser.php" data-toggle="modal" data-target="#logoutModal">
+                                    <a class="dropdown-item" href="../includes/logoutUser.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-                                </a>';
-                                }
-                                ?>
+                                </a>
+                            
+                            
                             </div>
                         </li>
 
