@@ -14,6 +14,7 @@ require_once 'db/connection.php';
 <header class="header">
   <?php include_once 'header.php'; ?>
 </header>
+<br>
 <!-- End of header -->
 
 
