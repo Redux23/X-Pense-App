@@ -23,11 +23,11 @@ $title = 'Contact'; // title page description.
           <hr>
           <?php
           
-           if(isset($_GET["error"])){
-            if($_GET["error"] == "errormsgnotsent"){
+           if(isset($_GET["message"])){
+            if($_GET["message"] == "errormsgnotsent"){
               echo '<p class="alert alert-danger" style="text-align: center; padding: 5px; margin:20px;">Please fill in empty fields.</p>';
             }
-            else if($_GET["success"] == "msgsent"){
+            else if($_GET["message"] == "msgsent"){
               
               echo '<p class="alert alert-success" style="text-align: center; padding: 5px; margin:20px;">Email sent succesfully!</p>';
             }
@@ -38,10 +38,10 @@ $title = 'Contact'; // title page description.
         </div>
         <div class="card-body">
           <form id="myForm" action="sendemail.php" method="POST">
-            <input type="text" name="name" placeholder="Fullname" class="form-control mb-2">
-            <input type="email" name="email" placeholder="Email" class="form-control mb-2">
-            <input type="text" name="subject" placeholder="Subject" class="form-control mb-2">
-            <textarea type="text" name="body" class="form-control mb-2" placeholder="Write message..."></textarea>
+            <input type="text" name="name" placeholder="Fullname" class="form-control mb-2" required>
+            <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
+            <input type="text" name="subject" placeholder="Subject" class="form-control mb-2" required>
+            <textarea type="text" name="body" class="form-control mb-2" placeholder="Write message..." required></textarea>
             <button class="btn btn-primary" name="btn-send">Send Message</button>
           </form>
         </div>
@@ -77,6 +77,25 @@ if(window.history.replaceState){
   window.history.replaceState(null, null, window.location.href);
 }
 </script>
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
+
 </body>
  
 </html>

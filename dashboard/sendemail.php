@@ -33,20 +33,20 @@ if(isset($_POST['btn-send'])){
 
         $mail->isHTML(true);
         $mail->Subject = 'Message Received (Contact Page)';
-        $mail->Body = "<h3>Name: $name <br>Email: $email<br>Message : $message</h3>";
+        $mail->Body = "<h3>Name: $fullname <br>Email: $email<br>Message : $message</h3>";
 
         $mail->send();
         /*$alert = '<div class="alert alert-success>
         <span>Message sent! Thank you for contacting us.</span>
         </div>';*/
-        header('Location: contact.php?success=msgsent');
+        header('Location: contact.php?message=msgsent');
         exit();
 
 
     } catch (Exception $e) {
-        /*$alert = '<div class="alert alert-danger">
-        <span>'.$e->getMessage().'</span></div>';*/
-        header('Location: contact.php?error=errormsgnotsent');
+        echo '<div class="alert alert-danger">
+        <span>'.$e->getMessage().'</span></div>';
+        header('Location: contact.php?message=errormsgnotsent');
         exit();
     }
     
