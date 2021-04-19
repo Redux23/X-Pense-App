@@ -70,6 +70,7 @@ require_once 'db/connection.php';
 
 
 if (isset($_POST['signup-button'])) {
+
   $userName = trim($_POST['username']);
   $firstName = trim($_POST['firstname']);
   $lastName = trim($_POST['lastname']);
@@ -98,6 +99,7 @@ if (isset($_POST['signup-button'])) {
     // echo '<p class="alert alert-danger">Password must have atleast 6 characters.</p>';
 
   } else if ($query->rowCount() == 0) {
+    
     $query = $connection->prepare("INSERT INTO user(username,firstname,lastname,email,password) VALUES (:username,:firstname,:lastname,:email,:passwordHash)");
     $query->bindParam("username", $userName, PDO::PARAM_STR);
     $query->bindParam("firstname", $firstName, PDO::PARAM_STR);
@@ -105,19 +107,43 @@ if (isset($_POST['signup-button'])) {
     $query->bindParam("email", $email, PDO::PARAM_STR);
     $query->bindParam("passwordHash", $passwordHash, PDO::PARAM_STR);
     $result = $query->execute();
+
     if ($result) {
-      header("location: signup.php?error=none");
-      exit(); // End function
-      echo 'Last Id was: '.$connection->lastInsertId();;
+      $last_id = $connection->lastInsertId();
+      echo "Thanks your id is: $last_id"; 
+
+      // header("location: signup.php?error=none");
+      // exit(); // End function
+        
     } else {
       header("location: signup.php?error=stmtfailed");
       exit(); // End function
       //echo '<p class="alert alert-danger">Something went wrong!</p>';
     }
+    
+    $query2 = $connection->prepare("INSERT INTO budget(userid) VALUES (:userid)");
+    $query2->bindParam("userid", $last_id, PDO::PARAM_INT);
+    $result2 = $query2->execute();
+
+    if($result2){
+      header("location: signup.php?error=none");
+      exit(); // End function
+    }else{
+      header("location: signup.php?error=stmtfailed");
+      exit();
+    }
+
   }
+
+  
+
+  
+
 }
 ?>
 
+
+   
 
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
@@ -128,6 +154,7 @@ if (isset($_POST['signup-button'])) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
 
 
 </body>
