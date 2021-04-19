@@ -109,29 +109,27 @@ if (isset($_POST['signup-button'])) {
     $result = $query->execute();
 
     if ($result) {
-      $last_id = $connection->lastInsertId();
-      echo "Thanks your id is: $last_id"; 
 
-      // header("location: signup.php?error=none");
-      // exit(); // End function
+      header("location: signup.php?error=none");
+      exit(); // End function
         
     } else {
       header("location: signup.php?error=stmtfailed");
       exit(); // End function
-      //echo '<p class="alert alert-danger">Something went wrong!</p>';
+      
     }
     
-    $query2 = $connection->prepare("INSERT INTO budget(userid) VALUES (:userid)");
-    $query2->bindParam("userid", $last_id, PDO::PARAM_INT);
-    $result2 = $query2->execute();
+    // $query2 = $connection->prepare("INSERT INTO budget(userid) VALUES (:userid)");
+    // $query2->bindParam("userid", $last_id, PDO::PARAM_INT);
+    // $result2 = $query2->execute();
 
-    if($result2){
-      header("location: signup.php?error=none");
-      exit(); // End function
-    }else{
-      header("location: signup.php?error=stmtfailed");
-      exit();
-    }
+    // if($result2){
+    //   header("location: signup.php?error=none");
+    //   exit(); // End function
+    // }else{
+    //   header("location: signup.php?error=stmtfailed");
+    //   exit();
+    // }
 
   }
 
