@@ -51,9 +51,7 @@ $title = 'Contact'; // title page description.
 
 </div>
 
-<!-- alert messages start -->
-<?php echo $alert?>
-<!-- alert messages end -->
+
 
 
 

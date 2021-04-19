@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+session_start()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +34,8 @@ include('session.php');
     }
     else{
       echo '<li><a href="../index.php">Home</a></li>';
-      echo '<li><a href="#">About</a></li>';
-      echo '<li><a href="#">Contact Us</a></li>';
+      echo '<li><a href="dashboard/aboutUs.php">About</a></li>';
+      echo '<li><a href="dashboard/contact.php">Contact Us</a></li>';
     }
     
     ?>

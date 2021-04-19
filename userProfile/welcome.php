@@ -24,17 +24,16 @@ include('session.php');
         <!-- session navbar for signed in users -->
     <?php 
     if (isset($_SESSION['user_id'])) {
-    
-    echo '<li><a href="../index.php">Home</a></li>';
-      echo '<li><a href="#">About</a></li>';
-      
-    sleep(2);
-    }
-    else{
         echo '<li><a href="index.php">Home</a></li>';
-        echo '<li><a href="#">Contact Us</a></li>';
+        echo '<li><a href="../dashboard/contact.php">Contact Us</a></li>';
         echo '<li><a href="../dashboard/index.php">Dashboard</a></li>';
         echo '<li><a href="../includes/logoutUser.php">Logout</a></li>';
+      sleep(2);    
+    }
+    else{
+        echo '<li><a href="../index.php">Home</a></li>';
+        echo '<li><a href="../dashboard/aboutUs.php">About</a></li>';
+        
       sleep(2);
     }
     
