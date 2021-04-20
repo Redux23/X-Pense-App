@@ -99,7 +99,7 @@ include('../userProfile/session.php');
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['userName']; ?></div>
+                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['f_name']; ?></div>
             </a>
 
             <!-- Divider -->
@@ -189,7 +189,7 @@ include('../userProfile/session.php');
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Budget Area Chart</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
@@ -202,7 +202,7 @@ include('../userProfile/session.php');
                             <!-- Bar Chart -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Bar Chart</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-bar">
