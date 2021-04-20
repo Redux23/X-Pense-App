@@ -1,5 +1,9 @@
 <?php
 include('../userProfile/session.php');
+
+require_once '../db/connection.php';
+
+$userID = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +112,7 @@ include('../userProfile/session.php');
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['userName']; ?></div>
+                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['f_name']; ?></div>
             </a>
 
             <!-- Divider -->
@@ -191,6 +195,16 @@ include('../userProfile/session.php');
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
+                            <?php
+                            $userID = $_SESSION['user_id'];
+            $stmt = $connection->prepare("SELECT u.*, b.*, e.*, c.* 
+            FROM user u, budget b, expense e, balance c 
+            WHERE u.userid=b.userid 
+             AND b.budget_id = e.budget_id 
+             AND u.userid=c.userid
+             AND u.userid=$userID");
+            $stmt->execute();
+            ?>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
@@ -202,60 +216,27 @@ include('../userProfile/session.php');
 
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Sheni</th>
-                                            <th>Data subscription</th>
-                                            <th>1000</th>
-                                            <th>500</th>
-                                            <th>500</th>
-                                        </tr>
-                                    </tfoot>
+                                   
                                     <tbody>
-                                        <tr>
-                                            <th>Abisoye</th>
-                                            <th>Cable TV</th>
-                                            <th>1000</th>
-                                            <th>200</th>
-                                            <th>800</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Tayo</th>
-                                            <th>Electricity</th>
-                                            <th>1000</th>
-                                            <th>300</th>
-                                            <th>700</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Ngozi</th>
-                                            <th>Groceries</th>
-                                            <th>1000</th>
-                                            <th>50</th>
-                                            <th>950</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Namdi</th>
-                                            <th>Toiletries</th>
-                                            <th>1000</th>
-                                            <th>50</th>
-                                            <th>950</th>
-                                        </tr>
-                                        <tr>
-                                            <th>John</th>
-                                            <th>Feeding</th>
-                                            <th>1000</th>
-                                            <th>100</th>
-                                            <th>900</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Janet</th>
-                                            <th>Transportation</th>
-                                            <th>1000</th>
-                                            <th>70</th>
-                                            <th>930</th>
-                                        </tr>
+                                    <?php
+    
+    
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+        {
+            extract($row);
+        ?>
+          <tr>
+              <td> <?php echo $row['firstname']; ?></td>
+              <td> <?php echo $row['item_desc']; ?></td>
+              <td> <?php echo $row['budget']; ?></td>
+              <td> <?php echo $row['expense']; ?></td>
+               <td> <?php echo $row['balance'];?></td>
+              
+              <?php
+            }
+  
 
-
+    ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -302,7 +283,7 @@ include('../userProfile/session.php');
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="../includes/logoutUser.php">Logout</a>
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@ if(isset($_POST['btn-send'])){
 
         $mail->isHTML(true);
         $mail->Subject = 'Message Received (Contact Page)';
-        $mail->Body = "<h3>Name: $fullname <br>Email: $email<br>Message : $message</h3>";
+        $mail->Body = "<h3>Email From: $email<br>Subject: $subject<br>Name of sender: $fullname <br>Message : $message</h3>";
 
         $mail->send();
         /*$alert = '<div class="alert alert-success>

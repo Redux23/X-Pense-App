@@ -35,7 +35,7 @@ session_start();
     if (isset($_SESSION['user_id'])) {
    echo '<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="">Profile<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="dashboard/index.php">Profile<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Contact Us</a>

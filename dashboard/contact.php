@@ -29,7 +29,7 @@ $title = 'Contact'; // title page description.
             }
             else if($_GET["message"] == "msgsent"){
               
-              echo '<p class="alert alert-success" style="text-align: center; padding: 5px; margin:20px;">Email sent succesfully!</p>';
+              echo '<p class="alert alert-success" style="text-align: center; padding: 5px; margin:20px;">Thanks for contacting us.</p>';
             }
            }
            

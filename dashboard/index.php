@@ -1,7 +1,11 @@
-<?php  
+<?php
 include('../userProfile/session.php');
 
+require_once '../db/connection.php';
+// require_once 'action/addbuget.php';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,56 +30,56 @@ include('../userProfile/session.php');
 
 <body id="page-top">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                <a class="navbar-brand" href="#"><span>
-    <img src="../assets/images/xpenseLogo.png" width="80px" height="80px"  class="logo" alt="X-Pense App">
-  </span></a>
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <a class="navbar-brand" href="#"><span>
+                <img src="../assets/images/xpenseLogo.png" width="80px" height="80px" class="logo" alt="X-Pense App">
+            </span></a>
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
 
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <div class="topbar-divider d-none d-sm-block"></div>
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['userName'];?>'s Expense tracker</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../userprofile/welcome.php">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="contact.php">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Contact Us
-                                </a>
-                                <a class="dropdown-item" href="aboutUs.php">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    About
-                                </a>
-                              
-                               <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="../includes/logoutUser.php">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            
-                            
-                            </div>
-                        </li>
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['userName']; ?>'s Expense tracker</span>
+                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="../userprofile/welcome.php">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" href="contact.php">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Contact Us
+                    </a>
+                    <a class="dropdown-item" href="aboutUs.php">
+                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                        About
+                    </a>
 
-                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../includes/logoutUser.php">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                    </a>
 
-                </nav>
-                <!-- End of Topbar -->
+
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- End of Topbar -->
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -88,7 +92,7 @@ include('../userProfile/session.php');
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['userName'];?></div>
+                <div class="sidebar-brand-text mx-3">Welcome <?php echo $_SESSION['f_name']; ?></div>
             </a>
 
             <!-- Divider -->
@@ -172,15 +176,25 @@ include('../userProfile/session.php');
 
                     <!-- Content Row -->
                     <div class="row d-flex align-items-center justify-content-center">
+
                         <!-- Budget (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
+
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Budget (Current)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">£400</div>
+                                                Budget (Current)<?php
+                                                                $stmt = $connection->query("SELECT SUM(budget) AS value_sum FROM budget");
+                                                                //$stmt->bindParam(":userid", $_SESSION['user_id'], PDO::PARAM_INT);
+                                                                $row = $stmt->fetch(); ?>
+
+                                            </div>
+
+
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                £<?php echo $row['value_sum']; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-pound-sign fa-2x text-gray-300"></i>
@@ -197,8 +211,11 @@ include('../userProfile/session.php');
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                Expenses(current)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">£215</div>
+                                                Expenses(current)<?php
+                                                                    $stmt = $connection->query("SELECT SUM(expense) AS exp_sum FROM expense");
+                                                                    //$stmt->bindParam(":userid", $_SESSION['user_id'], PDO::PARAM_INT);
+                                                                    $row = $stmt->fetch(); ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">£<?php echo $row['exp_sum']; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-pound-sign fa-2x text-gray-300"></i>
@@ -216,8 +233,11 @@ include('../userProfile/session.php');
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Balance(current)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">£185</div>
+                                                Balance(current)<?php
+                                                                $stmt = $connection->query("SELECT SUM(balance) AS bal_sum FROM balance");
+                                                                //$stmt->bindParam(":userid", $_SESSION['user_id'], PDO::PARAM_INT);
+                                                                $row = $stmt->fetch(); ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">£<?php echo $row['bal_sum']; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-pound-sign fa-2x text-gray-300"></i>
@@ -237,21 +257,24 @@ include('../userProfile/session.php');
                                 <!-- Card Header - Dropdown -->
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <form>
+                                    <form action="index.php" method="POST">
+                                        <div class="form-group">
+                                            <input type="hidden" placeholder="id" value="" name="userid" class="form-control">
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Budget</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Budget amount">
+                                            <input type="text" class="form-control" name="budget" id="exampleFormControlInput1" placeholder="Budget amount">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Expense</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Expense amount">
+                                            <input type="text" class="form-control" name="expense" id="exampleFormControlInput1" placeholder="Expense amount">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleFormControlTextarea1">Description</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Item desc..."></textarea>
+                                            <label for="exampleFormControlTextarea1">Item</label>
+                                            <textarea class="form-control" name="item" id="exampleFormControlTextarea1" rows="2" placeholder="Item desc..."></textarea>
                                         </div>
-                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button name="save-expense" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -295,6 +318,79 @@ include('../userProfile/session.php');
         </a>
 
 
+
+        <?php
+
+        if (isset($_POST['save-expense'])) {
+
+            $balSum = 0;
+            $budget = (int)$budgetString = $_POST['budget'];
+            $expense = (int)$expenseString = $_POST['expense'];
+            $item = $_POST['item'];
+
+            //Storing ID from session
+            $userID = ($_SESSION['user_id']);
+
+            //subtracting values;
+            $balSum = $budget - $expense;
+
+
+            //Preparing the SQL statement for the tables
+            $query = $connection->prepare("SELECT * FROM user WHERE userid=:userID");
+            $query->bindParam("userID", $userID, PDO::PARAM_INT);
+            $query->execute();
+
+            if ($query->rowCount() == 1) {
+                $query = $connection->prepare("INSERT INTO budget(budget,userid) VALUES (:budget,:userID)");
+                $query->bindParam(":budget", $budget, PDO::PARAM_INT);
+                $query->bindParam(":userID", $userID, PDO::PARAM_INT);
+                $result = $query->execute();
+                if ($result) {
+                    $last_id = $connection->lastInsertId();
+                    //header("location: index.php?message=savedsuccessfully");
+                    //exit();
+                    $_SESSION['bud_id'] = $result['budget_id'];
+                } else {
+                    echo '<p class="alert alert-danger">Something went wrong!</p>';
+                    header("location: index.php?message=errorNotSaved");
+                }
+
+                $query2 = $connection->prepare("INSERT INTO expense(expense,item_desc,budget_id) VALUES (:expense,:item_desc,:budgetid)");
+                $query2->bindParam(":expense", $expense, PDO::PARAM_INT);
+                $query2->bindParam(":item_desc", $item, PDO::PARAM_STR);
+                $query2->bindParam(":budgetid", $last_id, PDO::PARAM_INT);
+                $result2 = $query2->execute();
+                if ($result2) {
+                    //header("location: index.php?message=savedsuccessfully");
+                    // exit();
+
+                } else {
+
+                    // header("location: index.php?message=errorNotSaved");
+                    // exit();
+
+
+                }
+
+                $query3 = $connection->prepare("INSERT INTO balance(balance,userid) VALUES (:balance,:userid)");
+                $query3->bindParam(":balance", $balSum, PDO::PARAM_INT);
+                $query3->bindParam(":userid", $userID, PDO::PARAM_INT);
+                $result3 = $query3->execute();
+                if ($result3) {
+                    header("location: index.php?message=savedsuccessfully");
+                    exit();
+                } else {
+
+                    header("location: index.php?message=errorNotSaved");
+                    exit();
+                }
+            }
+        }
+
+        ?>
+
+
+
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -311,6 +407,7 @@ include('../userProfile/session.php');
         <!-- Page level custom scripts -->
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
+
 
 </body>
 
