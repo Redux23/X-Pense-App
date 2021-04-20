@@ -10,8 +10,8 @@
             <div class="col-12">
                 <div class="section-title mb-4 pb-2 text-center">
                     <h3 class="title text-uppercase mb-4">Team Members</h3>
-                    <p class="text-muted mx-auto para-desc mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, numquam! Repudiandae beatae eum magnam sunt non,
-                        voluptates dolores id, ex sequi quis error dolore laudantium pariatur! Odit, repudiandae suscipit. Eius</p>
+                    <p class="text-muted mx-auto para-desc mb-0">Meet the team of engineers. Students of Robert Gordon University who came together to take on this project. 
+                    They help to bring on-screen projects to life with their creative artistic talent.</p>
                 </div>
             </div>
         </div>
